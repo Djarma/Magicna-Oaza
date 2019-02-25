@@ -1,8 +1,26 @@
+@font-face {
+  font-family: 'BurbankSmall-Bold';
+  src: url("../fonts/BurbankSmall/BurbankSmall-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/BurbankSmall/BurbankSmall-Bold.otf") format("opentype"), url("../fonts/BurbankSmall/BurbankSmall-Bold.woff") format("woff"), url("../fonts/BurbankSmall/BurbankSmall-Bold.ttf") format("truetype"), url("../fonts/BurbankSmall/BurbankSmall-Bold.svg#BurbankSmall-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'GothamRounded-Bold';
+  src: url("../fonts/Gotham-rounded/GothamRounded-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-rounded/GothamRounded-Bold.otf") format("opentype"), url("../fonts/Gotham-rounded/GothamRounded-Bold.woff") format("woff"), url("../fonts/Gotham-rounded/GothamRounded-Bold.ttf") format("truetype"), url("../fonts/Gotham-rounded/GothamRounded-Bold.svg#GothamRounded-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'GothamRounded-Book';
+  src: url("../fonts/Gotham-rounded/GothamRounded-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-rounded/GothamRounded-Book.otf") format("opentype"), url("../fonts/Gotham-rounded/GothamRounded-Book.woff") format("woff"), url("../fonts/Gotham-rounded/GothamRounded-Book.ttf") format("truetype"), url("../fonts/Gotham-rounded/GothamRounded-Book.svg#GothamRounded-Book") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 html {
-  font-size: 14px; }
+  font-size: 16px; }
 
 img {
   max-width: 100%; }
+
+a {
+  font-family: "GothamRounded-Bold"; }
 
 .img-holder {
   position: relative;
@@ -59,7 +77,6 @@ img {
   100% {
     -webkit-transform: translateX(-1px) rotate(0);
     transform: translateX(-1px) rotate(0); } }
-
 @keyframes buzz {
   10% {
     -webkit-transform: translateX(3px) rotate(2deg);
@@ -91,7 +108,6 @@ img {
   100% {
     -webkit-transform: translateX(-1px) rotate(0);
     transform: translateX(-1px) rotate(0); } }
-
 .buzz {
   display: block;
   vertical-align: middle;
@@ -122,7 +138,6 @@ img {
   100% {
     opacity: 1;
     transform: translateX(0); } }
-
 @-webkit-keyframes slideLeft {
   0% {
     opacity: 0;
@@ -130,7 +145,6 @@ img {
   100% {
     opacity: 1;
     transform: translateX(0); } }
-
 .slideLeft {
   animation-name: slideLeft;
   visibility: visible;
@@ -144,7 +158,6 @@ img {
   100% {
     opacity: 1;
     transform: translateX(0); } }
-
 @-webkit-keyframes slideRight {
   0% {
     opacity: 0;
@@ -152,7 +165,6 @@ img {
   100% {
     opacity: 1;
     transform: translateX(0); } }
-
 .slideRight {
   animation-name: slideRight;
   visibility: visible;
@@ -166,7 +178,6 @@ img {
   100% {
     opacity: 1;
     transform: translateY(0); } }
-
 @-webkit-keyframes slideUp {
   0% {
     opacity: 0;
@@ -174,7 +185,6 @@ img {
   100% {
     opacity: 1;
     transform: translateY(0); } }
-
 .slideUp {
   animation-name: slideUp;
   visibility: visible;
@@ -187,7 +197,6 @@ img {
   100% {
     opacity: 1;
     transform: translateX(0); } }
-
 @-webkit-keyframes slideDown {
   0% {
     opacity: 0;
@@ -195,7 +204,6 @@ img {
   100% {
     opacity: 1;
     transform: translateX(0); } }
-
 .slideDown {
   animation-name: slideDown;
   visibility: visible;
@@ -213,13 +221,11 @@ img {
     transform: scale(0); }
   100% {
     transform: scale(1); } }
-
 @-webkit-keyframes zoom {
   0% {
     transform: scale(0); }
   100% {
     transform: scale(1); } }
-
 .form-control-success,
 .form-control-warning,
 .form-control-danger {
@@ -285,3 +291,178 @@ img {
 
 .error-msg > * {
   color: #d9534f; }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1; }
+  header .container {
+    max-width: 1620px;
+    padding: 0 10px; }
+    header .container .navbar-brand {
+      max-width: 30%; }
+    header .container .header-action a.btn {
+      border-radius: 20px;
+      padding: 5px 10px;
+      font-size: .8rem; }
+      header .container .header-action a.btn span {
+        display: none; }
+    header .container .header-action .search .search-icon {
+      cursor: pointer; }
+    header .container .header-action .search .search-form {
+      position: absolute;
+      right: 0;
+      top: 80px;
+      display: none;
+      width: 100%; }
+    header .container .header-action .cart {
+      position: relative; }
+      header .container .header-action .cart .num {
+        position: absolute;
+        background-color: #FF151F;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 0.6rem;
+        width: 16px;
+        height: 16px;
+        text-align: center;
+        top: -5px;
+        right: -1px;
+        line-height: 16px; }
+      header .container .header-action .cart .small-cart {
+        position: fixed;
+        top: 0;
+        right: -1000px;
+        height: 100vh;
+        overflow: scroll;
+        max-width: 260px;
+        padding: 0 10px;
+        font-family: "GothamRounded-Book";
+        transition: 1s linear;
+        z-index: 101; }
+        header .container .header-action .cart .small-cart.active {
+          right: 0; }
+        header .container .header-action .cart .small-cart > h4 {
+          font-family: "GothamRounded-Bold";
+          color: #FF151F; }
+        header .container .header-action .cart .small-cart .small-cart-info {
+          flex-direction: column;
+          font-family: "GothamRounded-Bold"; }
+          header .container .header-action .cart .small-cart .small-cart-info .price h4, header .container .header-action .cart .small-cart .small-cart-info .delivery h4 {
+            font-size: 1rem !important; }
+          header .container .header-action .cart .small-cart .small-cart-info .final-price h2 {
+            font-size: 1.25rem !important; }
+        header .container .header-action .cart .small-cart .small-cart-products {
+          border-bottom: 2px solid #cfcfcf;
+          overflow: scroll;
+          height: 470px; }
+          header .container .header-action .cart .small-cart .small-cart-products .small-cart-item {
+            margin-bottom: 25px; }
+            header .container .header-action .cart .small-cart .small-cart-products .small-cart-item .small-cart-item-photo {
+              margin-right: 10px; }
+            header .container .header-action .cart .small-cart .small-cart-products .small-cart-item .small-cart-item-detail {
+              position: relative; }
+              header .container .header-action .cart .small-cart .small-cart-products .small-cart-item .small-cart-item-detail .detail-title {
+                font-size: 1.25rem; }
+              header .container .header-action .cart .small-cart .small-cart-products .small-cart-item .small-cart-item-detail .close-small-cart {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 25px;
+                height: 25px;
+                background: #F9F9F9;
+                border-radius: 50%; }
+        header .container .header-action .cart .small-cart .small-cart-action .btn {
+          width: 200px;
+          height: 55px;
+          border-radius: 36px;
+          line-height: 40px; }
+        header .container .header-action .cart .small-cart .small-cart-action .btn-light {
+          font-size: 1.10rem; }
+        header .container .header-action .cart .small-cart .small-cart-action .btn-warning {
+          font-size: 1.25;
+          color: #fff; }
+    header .container .navbar-toggler {
+      padding: 0.15rem 0.55rem; }
+    header .container .submenu {
+      display: none;
+      padding-left: 10px !important;
+      margin-bottom: 15px !important; }
+      header .container .submenu .submenu-icon {
+        width: 30px;
+        margin-right: 20px;
+        margin-bottom: 10px; }
+      header .container .submenu .level-2 {
+        padding-left: 50px !important;
+        display: none; }
+
+@media (min-width: 450px) {
+  header .container {
+    padding-left: 15px;
+    padding-right: 15px; }
+    header .container .header-action .btn {
+      font-size: 1rem; }
+    header .container .header-action img {
+      width: 100% !important; }
+    header .container .header-action .search .search-form {
+      top: 100px; }
+    header .container .header-action .cart .num {
+      top: -7px;
+      right: -7px; } }
+@media (min-width: 576px) {
+  header .container .navbar-brand {
+    width: 10; }
+  header .container .header-action a.btn {
+    padding: 6px 20px;
+    font-size: 1rem; }
+    header .container .header-action a.btn span {
+      display: inline-block; }
+  header .container .header-action .search .search-form {
+    top: 120px; }
+  header .container .header-action .cart .small-cart {
+    max-width: 480px;
+    padding: 0 19px 0 50px; }
+    header .container .header-action .cart .small-cart .small-cart-item .small-cart-item-photo {
+      margin-right: 30px !important; }
+    header .container .header-action .cart .small-cart .small-cart-item-detail {
+      padding-right: 100px; }
+      header .container .header-action .cart .small-cart .small-cart-item-detail .detail-title {
+        font-size: 1.5rem !important; } }
+@media (min-width: 992px) {
+  header .container .header-action .cart .small-cart {
+    max-width: 600px; }
+    header .container .header-action .cart .small-cart .small-cart-item-detail {
+      padding-right: 150px; }
+    header .container .header-action .cart .small-cart .small-cart-info .price h4, header .container .header-action .cart .small-cart .small-cart-info .delivery h4 {
+      font-size: 1.5rem !important; }
+    header .container .header-action .cart .small-cart .small-cart-info .final-price h2 {
+      font-size: 1.8rem !important; }
+  header .container .submenu {
+    position: absolute;
+    top: 120px; }
+    header .container .submenu .submenu-link {
+      margin-bottom: 15px; }
+    header .container .submenu .level-2 {
+      position: absolute;
+      width: 500px;
+      height: 300px;
+      top: 0;
+      left: 150px;
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2; }
+      header .container .submenu .level-2 .submenu-link {
+        margin-bottom: 10px; } }
+.body-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(79, 79, 79, 0.38);
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: none; }
+
+/*# sourceMappingURL=theme.css.map */
