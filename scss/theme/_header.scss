@@ -68,7 +68,7 @@ header {
                     padding: 0 10px;
                     font-family: $gotham-book;
                     transition: 1s linear;
-                    z-index: 101;
+                    z-index: 1000;
 
 
                     &.active {

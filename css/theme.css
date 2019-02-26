@@ -344,7 +344,7 @@ header {
         padding: 0 10px;
         font-family: "GothamRounded-Book";
         transition: 1s linear;
-        z-index: 101; }
+        z-index: 1000; }
         header .container .header-action .cart .small-cart.active {
           right: 0; }
         header .container .header-action .cart .small-cart > h4 {
@@ -494,8 +494,13 @@ header {
     height: 12px;
     margin-right: 10px; }
 
+.owl-carousel {
+  z-index: 0; }
+
 .toys-wrapper {
-  padding: 18px 0 15px 0; }
+  padding: 18px 0 15px 0;
+  position: relative;
+  margin-bottom: 105px; }
   .toys-wrapper .toys-slider-item {
     width: 120px;
     height: 78px;
@@ -503,6 +508,68 @@ header {
     align-items: center;
     justify-content: center;
     margin: 0 15px; }
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 91px; }
+  .section-title:before {
+    content: '';
+    background-image: url(../img/yellowcray.png);
+    position: absolute;
+    width: 219px;
+    height: 79px;
+    top: -10px;
+    left: 30px;
+    z-index: -1; }
+
+.product-item a {
+  background: #f9f9f9;
+  border-radius: 12px;
+  width: 285px;
+  height: 285px;
+  font-family: "GothamRounded-Book" !important; }
+.product-item .sticker-wrapper .sticker-sale {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  color: #fff;
+  background: #FFC302;
+  text-align: center; }
+  .product-item .sticker-wrapper .sticker-sale span {
+    position: relative;
+    font-size: 1.5rem;
+    font-family: "GothamRounded-Bold";
+    line-height: 75px; }
+.product-item .sticker-wrapper .sticker-new {
+  width: 95px;
+  height: 35px;
+  color: #fff;
+  background: #FF151F;
+  border-radius: 25px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: center; }
+  .product-item .sticker-wrapper .sticker-new span {
+    position: relative;
+    font-size: 1.1rem;
+    font-family: "GothamRounded-Bold";
+    line-height: 35px;
+    text-transform: uppercase; }
+.product-item h5 {
+  width: 150px; }
+  .product-item h5 a {
+    background: none; }
+.product-item .price .old-price, .product-item .price .new-price {
+  font-family: "GothamRounded-Bold"; }
+.product-item .price .old-price {
+  color: #9B9B9B; }
+.product-item .price .new-price {
+  font-size: 1.5rem; }
 
 @media (min-width: 768px) {
   .lead-slider-wrapper .lead-slider-item {
@@ -517,7 +584,11 @@ header {
     margin-right: 15px; }
 
   .toys-wrapper {
-    padding: 38px 0 25px 0; } }
+    padding: 38px 0 25px 0; }
+
+  .product-item a {
+    width: 305px;
+    height: 305px; } }
 @media (min-width: 992px) {
   .lead-slider-wrapper .lead-slider-item {
     padding: 266px 0 76px 0; }

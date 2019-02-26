@@ -105,6 +105,27 @@ $(document).ready(function () {
                 }
             }
         });
+        
+        $('.most-popular-slider').owlCarousel({
+           items: 4,
+           dots: false,
+           loop: true,
+           autoplay: true,
+           responsive: {
+                0:{
+                    items: 1
+                },
+                768:{
+                    items: 2
+                },
+                992:{
+                    items: 3
+                },
+                1140:{
+                    items: 4
+                }
+            }
+        });
     };
 
 });//end document.ready
