@@ -85,48 +85,77 @@ $(document).ready(function () {
             dots: true,
             loop: true
         });
-        
+
+        //toys logos slider
+
         $('.toys-slider').owlCarousel({
-           items: 12,
-           dots: false,
-           loop: true,
-           responsive: {
-                0:{
+            items: 12,
+            dots: false,
+            loop: true,
+            responsive: {
+                0: {
                     items: 2
                 },
-                576:{
+                576: {
                     items: 6
                 },
-                992:{
+                992: {
                     items: 8
                 },
-                1340:{
+                1340: {
                     items: 12
                 }
             }
         });
-        
+
+        // most popular section slider
+
         $('.most-popular-slider').owlCarousel({
-           items: 4,
-           dots: false,
-           loop: true,
-           autoplay: true,
-           responsive: {
-                0:{
+            items: 4,
+            dots: false,
+            loop: true,
+            autoplay: true,
+            responsive: {
+                0: {
                     items: 1
                 },
-                768:{
+                768: {
                     items: 2
                 },
-                992:{
+                992: {
                     items: 3
                 },
-                1140:{
+                1340: {
                     items: 4
                 }
             }
         });
-    };
+
+        // new products
+
+        $('.new-products-slider').owlCarousel({
+            items: 4,
+            dots: false,
+            loop: true,
+            nav: true,
+            navText: ['<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>'],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 2
+                },
+                992: {
+                    items: 3
+                },
+                1340: {
+                    items: 4
+                }
+            }
+        });
+    }
+    ;
 
 });//end document.ready
 
