@@ -49,6 +49,26 @@
     }
 }
 
+// toys wrapper
+
+.toys-wrapper {
+    padding: 18px 0 15px 0;
+    
+    .toys-slider-item {
+        
+        width: 120px;
+        height: 78px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 15px;
+    }
+}
+
+
+
+
+
 @media(min-width: 768px){
     .lead-slider-wrapper {
     
@@ -79,7 +99,14 @@
         }
     }
 }
+
+.toys-wrapper {
+    padding: 38px 0 25px 0;
 }
+
+}
+
+
 
 @media(min-width: 992px){
     .lead-slider-wrapper {

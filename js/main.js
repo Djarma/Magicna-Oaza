@@ -85,6 +85,26 @@ $(document).ready(function () {
             dots: true,
             loop: true
         });
+        
+        $('.toys-slider').owlCarousel({
+           items: 12,
+           dots: false,
+           loop: true,
+           responsive: {
+                0:{
+                    items: 2
+                },
+                576:{
+                    items: 6
+                },
+                992:{
+                    items: 8
+                },
+                1340:{
+                    items: 12
+                }
+            }
+        });
     };
 
 });//end document.ready

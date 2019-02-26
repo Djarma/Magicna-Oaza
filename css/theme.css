@@ -494,6 +494,16 @@ header {
     height: 12px;
     margin-right: 10px; }
 
+.toys-wrapper {
+  padding: 18px 0 15px 0; }
+  .toys-wrapper .toys-slider-item {
+    width: 120px;
+    height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px; }
+
 @media (min-width: 768px) {
   .lead-slider-wrapper .lead-slider-item {
     padding: 206px 0 76px 0; }
@@ -504,7 +514,10 @@ header {
   .lead-slider-wrapper .owl-dots .owl-dot span {
     width: 14px;
     height: 14px;
-    margin-right: 15px; } }
+    margin-right: 15px; }
+
+  .toys-wrapper {
+    padding: 38px 0 25px 0; } }
 @media (min-width: 992px) {
   .lead-slider-wrapper .lead-slider-item {
     padding: 266px 0 76px 0; }
