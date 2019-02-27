@@ -524,7 +524,8 @@ header {
     z-index: -1; }
 
 .new-products {
-  position: relative; }
+  position: relative;
+  margin-bottom: 106px; }
   .new-products .section-title:before {
     left: 60px; }
   .new-products .owl-nav {
@@ -589,6 +590,34 @@ header {
   color: #9B9B9B; }
 .product-item .price .new-price {
   font-size: 1.5rem; }
+
+.toys-category .section-title {
+  margin-bottom: 67px; }
+  .toys-category .section-title:before {
+    display: none; }
+.toys-category figure {
+  position: relative; }
+  .toys-category figure .toys-item-detail {
+    position: absolute;
+    background: url(../img/craypurple.png);
+    width: 200px;
+    height: 80px;
+    bottom: 15px;
+    left: 15px;
+    text-align: center; }
+    .toys-category figure .toys-item-detail h3 {
+      color: #fff;
+      line-height: 70px; }
+
+.toys-category-slider .owl-stage-outer {
+  overflow: visible !important; }
+.toys-category-slider .owl-dots {
+  text-align: left; }
+  .toys-category-slider .owl-dots .owl-dot.active span,
+  .toys-category-slider .owl-dots .owl-dot:hover span {
+    background: #8759F2; }
+.toys-category-slider .toys-category-slider-item {
+  max-width: 680px; }
 
 @media (min-width: 768px) {
   .lead-slider-wrapper .lead-slider-item {

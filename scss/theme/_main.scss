@@ -94,6 +94,7 @@
 
 .new-products {
     position: relative;
+    margin-bottom: 106px ;
 
     .section-title {
 
@@ -200,6 +201,57 @@
     }
 }
 
+.toys-category {
+
+    .section-title {
+        margin-bottom: 67px;
+
+        &:before {
+            display: none;
+        }
+    }
+
+    figure {
+        position: relative;
+        
+        .toys-item-detail {
+            position: absolute;
+            background: url(../img/craypurple.png);
+            width: 200px;
+            height: 80px;
+            bottom: 15px;
+            left: 15px;
+            text-align: center;
+            
+            h3 {
+                color: #fff;
+                line-height: 70px;
+            }
+        }
+    }
+
+}
+
+.toys-category-slider {
+
+    .owl-stage-outer {
+        overflow: visible !important;
+    }
+    
+    .owl-dots {
+        text-align: left;
+        
+        .owl-dot.active span,
+        .owl-dot:hover span {
+            background: $purple;
+        }
+    }
+
+    .toys-category-slider-item {
+        max-width: 680px;
+    }
+}
+
 
 
 @media(min-width: 768px){
@@ -246,34 +298,34 @@
     }
     .new-products {
 
-            .owl-prev {
-                left: -25px !important;
-            }
+        .owl-prev {
+            left: -25px !important;
+        }
 
-            .owl-next {
-                right: -25px !important;
-            }
+        .owl-next {
+            right: -25px !important;
         }
     }
+}
 
 
 
-    @media(min-width: 992px){
-        .lead-slider-wrapper {
+@media(min-width: 992px){
+    .lead-slider-wrapper {
 
-            .lead-slider-item {
-                padding: 266px 0 76px 0;
+        .lead-slider-item {
+            padding: 266px 0 76px 0;
 
-            }
+        }
 
-            .owl-dots {
+        .owl-dots {
 
-                .owl-dot {
+            .owl-dot {
 
-                    span {
-                        margin-right: 20px;
-                    }
+                span {
+                    margin-right: 20px;
                 }
             }
         }
     }
+}
