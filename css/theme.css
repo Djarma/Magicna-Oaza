@@ -591,23 +591,25 @@ header {
 .product-item .price .new-price {
   font-size: 1.5rem; }
 
-.toys-category .section-title {
-  margin-bottom: 67px; }
-  .toys-category .section-title:before {
-    display: none; }
-.toys-category figure {
-  position: relative; }
-  .toys-category figure .toys-item-detail {
-    position: absolute;
-    background: url(../img/craypurple.png);
-    width: 200px;
-    height: 80px;
-    bottom: 15px;
-    left: 15px;
-    text-align: center; }
-    .toys-category figure .toys-item-detail h3 {
-      color: #fff;
-      line-height: 70px; }
+.toys-category {
+  margin-bottom: 68px; }
+  .toys-category .section-title {
+    margin-bottom: 67px; }
+    .toys-category .section-title:before {
+      display: none; }
+  .toys-category figure {
+    position: relative; }
+    .toys-category figure .toys-item-detail {
+      position: absolute;
+      background: url(../img/craypurple.png);
+      width: 200px;
+      height: 80px;
+      bottom: 15px;
+      left: 15px;
+      text-align: center; }
+      .toys-category figure .toys-item-detail h3 {
+        color: #fff;
+        line-height: 70px; }
 
 .toys-category-slider .owl-stage-outer {
   overflow: visible !important; }
@@ -618,6 +620,27 @@ header {
     background: #8759F2; }
 .toys-category-slider .toys-category-slider-item {
   max-width: 680px; }
+
+.recomended-products {
+  padding-bottom: 87px; }
+  .recomended-products .section-title {
+    margin-bottom: 67px; }
+    .recomended-products .section-title:before {
+      display: block; }
+  .recomended-products .owl-nav {
+    display: block !important;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%; }
+    .recomended-products .owl-nav .fa {
+      font-size: 1.5rem; }
+    .recomended-products .owl-nav .owl-prev {
+      position: absolute;
+      left: 0px; }
+    .recomended-products .owl-nav .owl-next {
+      position: absolute;
+      right: 0px; }
 
 @media (min-width: 768px) {
   .lead-slider-wrapper .lead-slider-item {
@@ -641,6 +664,11 @@ header {
   .new-products .owl-prev {
     left: -25px !important; }
   .new-products .owl-next {
+    right: -25px !important; }
+
+  .recomended-products .owl-nav .owl-prev {
+    left: -25px !important; }
+  .recomended-products .owl-nav .owl-next {
     right: -25px !important; } }
 @media (min-width: 992px) {
   .lead-slider-wrapper .lead-slider-item {
