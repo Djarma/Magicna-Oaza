@@ -16,6 +16,9 @@
 html {
   font-size: 16px; }
 
+body {
+  overflow-x: hidden; }
+
 img {
   max-width: 100%; }
 
@@ -24,6 +27,13 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "BurbankSmall-Bold"; }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0; }
 
 .img-holder {
   position: relative;
@@ -641,6 +651,37 @@ header {
     .recomended-products .owl-nav .owl-next {
       position: absolute;
       right: 0px; }
+
+.ask-magzi {
+  padding-top: 61px;
+  padding-bottom: 99px;
+  position: relative; }
+  .ask-magzi .section-title {
+    margin-bottom: 66px; }
+    .ask-magzi .section-title:before {
+      background: none; }
+  .ask-magzi:before {
+    content: '';
+    background: url(../img/bgshape.png);
+    position: absolute;
+    height: 198px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: -1; }
+  .ask-magzi:after {
+    content: '';
+    background: url(../img/magzi.png) no-repeat;
+    position: absolute;
+    height: 261px;
+    width: 287px;
+    bottom: 27px;
+    left: 210px;
+    z-index: -1; }
+  .ask-magzi .btn {
+    border-radius: 36px;
+    height: 55px;
+    display: inline-block; }
 
 @media (min-width: 768px) {
   .lead-slider-wrapper .lead-slider-item {

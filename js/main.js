@@ -197,6 +197,17 @@ $(document).ready(function () {
     }
     ;
 
+    if ($('.custom-select').length > 0) {
+
+        $('.custom-select').select2({
+            minimumResultsForSearch: -1
+        });
+
+    }
+
+
+
+
 });//end document.ready
 
 

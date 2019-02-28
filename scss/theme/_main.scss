@@ -288,6 +288,54 @@
     }
 }
 
+.ask-magzi {
+    padding-top: 61px;
+    padding-bottom: 99px;
+    position: relative;
+    
+    .section-title{
+        margin-bottom: 66px;
+        
+        &:before {
+        background: none;
+        }
+    }
+    
+    &:before {
+        content: '';
+        background: url(../img/bgshape.png);
+        position: absolute;
+        height: 198px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+    
+    &:after {
+        content: '';
+        background: url(../img/magzi.png) no-repeat;
+        position: absolute;
+        height: 261px;
+        width: 287px;
+        bottom: 27px;
+        left: 210px;
+        z-index: -1;
+    }
+    
+    .btn {
+        border-radius: 36px;
+        height: 55px;
+        display: inline-block;
+    }
+}
+
+
+
+
+
+
+
 
 @media(min-width: 768px){
     .lead-slider-wrapper {
