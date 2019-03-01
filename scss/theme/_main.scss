@@ -20,7 +20,6 @@
         }
 
         .btn-warning {
-            border-radius: 36px;
             color: #fff;
             font-size: 1rem;
             padding: 15px 39px;
@@ -103,29 +102,29 @@
         }
     }
 
-    .owl-nav {
-        display: block !important;
+
+}
+.owl-nav {
+    display: block !important;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+
+    .fa {
+        font-size: 1.5rem;
+    }
+
+    .owl-prev {
         position: absolute;
-        top: 40%;
-        left: 0;
-        width: 100%;
+        left: 0px;
+    }
 
-        .fa {
-            font-size: 1.5rem;
-        }
-
-        .owl-prev {
-            position: absolute;
-            left: 0px;
-        }
-
-        .owl-next {
-            position: absolute;
-            right: 0px;
-        }
+    .owl-next {
+        position: absolute;
+        right: 0px;
     }
 }
-
 .product-item {
 
     a {
@@ -324,7 +323,6 @@
     }
 
     .btn {
-        border-radius: 36px;
         height: 55px;
         display: inline-block;
     }
@@ -378,6 +376,67 @@
 }
 
 
+// CATEGORY SECTION
+
+.category {
+    padding-top: 35px;
+    padding-bottom: 40px;
+
+
+    .section-title{
+        margin-bottom: 77px;
+
+        &:before {
+            background: none;
+        }
+    }
+
+    .category-slider {
+        position: relative;
+
+        &:after {
+            content: '';
+            width: 2px;
+            height: 100%;
+            background: $purple;
+            position: absolute;
+            right: 0;
+            top: 0;
+
+        }
+
+        li {
+            border-right: 0.5px solid #fff;
+        }
+    }
+
+
+    .owl-item {
+
+        img {
+            width: auto;
+            display: inline-block;
+        }
+    }
+
+    h3 {
+        margin-bottom: 38px;
+    }
+
+    figure {
+        margin-bottom: 48px;
+    }
+
+    .btn {
+        color: $purple;
+        padding: 18px 39px;
+        font-size: 1.25rem;
+    }
+}
+
+
+
+
 @media(min-width: 576px){
 
 
@@ -408,6 +467,14 @@
             width: 150px;
         }
     }
+
+
+    .category {
+        padding-top: 65px;
+        padding-bottom: 70px;
+
+    }
+
 }
 
 

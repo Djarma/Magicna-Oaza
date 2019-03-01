@@ -194,8 +194,36 @@ $(document).ready(function () {
                 }
             }
         });
+
+
+        // category
+
+        $('.category-slider').owlCarousel({
+            items: 4,
+            dots: false,
+            loop: true,
+            nav: true,
+            navText: ['<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>'],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 2
+                },
+                992: {
+                    items: 3
+                },
+                1340: {
+                    items: 4
+                }
+            }
+        });
     }
     ;
+
+
+// SELECT 2 
 
     if ($('.custom-select').length > 0) {
 

@@ -77,6 +77,8 @@ $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
 $link:          $gray-700 !default;
 $gray-w:        $gray-400 !default;
+$purple:        $purple !default;
+$white:         $white !default;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -91,7 +93,9 @@ $theme-colors: map-merge(
     "light":      $light,
     "dark":       $dark,
     "link":       $link,
-    "gray-w":     $gray-w
+    "gray-w":     $gray-w,
+    "purple":     $purple,
+    "white":      $white
     
   ),
   $theme-colors
@@ -242,7 +246,7 @@ $line-height-sm:              1.5 !default;
 $border-width:                1px !default;
 $border-color:                $gray-300 !default;
 
-$border-radius:               .25rem !default;
+$border-radius:               36px !default;
 $border-radius-lg:            .3rem !default;
 $border-radius-sm:            .2rem !default;
 

@@ -489,7 +489,6 @@ header {
     .lead-slider-wrapper .lead-slider-item .caption h1 {
       font-size: 2.5rem; }
   .lead-slider-wrapper .lead-slider-item .btn-warning {
-    border-radius: 36px;
     color: #fff;
     font-size: 1rem;
     padding: 15px 39px; }
@@ -539,20 +538,21 @@ header {
   margin-bottom: 106px; }
   .new-products .section-title:before {
     left: 60px; }
-  .new-products .owl-nav {
-    display: block !important;
+
+.owl-nav {
+  display: block !important;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 100%; }
+  .owl-nav .fa {
+    font-size: 1.5rem; }
+  .owl-nav .owl-prev {
     position: absolute;
-    top: 40%;
-    left: 0;
-    width: 100%; }
-    .new-products .owl-nav .fa {
-      font-size: 1.5rem; }
-    .new-products .owl-nav .owl-prev {
-      position: absolute;
-      left: 0px; }
-    .new-products .owl-nav .owl-next {
-      position: absolute;
-      right: 0px; }
+    left: 0px; }
+  .owl-nav .owl-next {
+    position: absolute;
+    right: 0px; }
 
 .product-item a {
   background: #f9f9f9;
@@ -675,7 +675,6 @@ header {
   .ask-magzi .select2-container {
     display: block; }
   .ask-magzi .btn {
-    border-radius: 36px;
     height: 55px;
     display: inline-block; }
   .ask-magzi .btn-warning {
@@ -714,6 +713,37 @@ header {
 .select2-container--default .select2-selection--single .select2-selection__rendered {
   margin-right: 20px; }
 
+.category {
+  padding-top: 35px;
+  padding-bottom: 40px; }
+  .category .section-title {
+    margin-bottom: 77px; }
+    .category .section-title:before {
+      background: none; }
+  .category .category-slider {
+    position: relative; }
+    .category .category-slider:after {
+      content: '';
+      width: 2px;
+      height: 100%;
+      background: #8759F2;
+      position: absolute;
+      right: 0;
+      top: 0; }
+    .category .category-slider li {
+      border-right: 0.5px solid #fff; }
+  .category .owl-item img {
+    width: auto;
+    display: inline-block; }
+  .category h3 {
+    margin-bottom: 38px; }
+  .category figure {
+    margin-bottom: 48px; }
+  .category .btn {
+    color: #8759F2;
+    padding: 18px 39px;
+    font-size: 1.25rem; }
+
 @media (min-width: 576px) {
   .ask-magzi {
     padding-top: 40px;
@@ -731,7 +761,11 @@ header {
       width: auto;
       margin-right: 25px; }
     .ask-magzi .magzi-price {
-      width: 150px; } }
+      width: 150px; }
+
+  .category {
+    padding-top: 65px;
+    padding-bottom: 70px; } }
 @media (min-width: 768px) {
   .lead-slider-wrapper .lead-slider-item {
     padding: 206px 0 76px 0; }
