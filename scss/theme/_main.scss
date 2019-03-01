@@ -288,19 +288,21 @@
     }
 }
 
+// ASK MAGZI
+
 .ask-magzi {
-    padding-top: 61px;
-    padding-bottom: 99px;
+    padding-top: 20px;
+    padding-bottom: 40px;
     position: relative;
-    
+
     .section-title{
         margin-bottom: 66px;
-        
+
         &:before {
-        background: none;
+            background: none;
         }
     }
-    
+
     &:before {
         content: '';
         background: url(../img/bgshape.png);
@@ -311,29 +313,102 @@
         left: 0;
         z-index: -1;
     }
-    
-    &:after {
-        content: '';
-        background: url(../img/magzi.png) no-repeat;
-        position: absolute;
-        height: 261px;
-        width: 287px;
-        bottom: 27px;
-        left: 210px;
-        z-index: -1;
+
+
+    .form-group {
+        width: 100%;
     }
-    
+
+    .select2-container {
+        display: block;
+    }
+
     .btn {
         border-radius: 36px;
         height: 55px;
         display: inline-block;
     }
+
+    .btn-warning {
+        font-family: $gotham-bold;
+        padding-left: 29px;
+        padding-right: 29px;
+    }
+
+    .select2-container--default .select2-selection--single {
+        border-radius: 36px;
+        height: 55px;
+        background: $gray-100;
+        padding: 10px;
+        border-color: transparent;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        top: 13px;
+        right: 10px;
+    }
+
+}
+
+.select2-container .select2-dropdown {
+    border-color: transparent !important;
+    background: $gray-100 !important;
+}
+
+.select2-container--open .select2-dropdown--above {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+.select2-container--open .select2-dropdown--below {
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 
 
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: $yellow;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    margin-right: 20px;
+}
+
+
+@media(min-width: 576px){
 
 
 
+    .ask-magzi {
+
+        padding-top: 40px;
+        padding-bottom: 60px;
+
+        &:after {
+            content: '';
+            background: url(../img/magzi.png) no-repeat;
+            position: absolute;
+            height: 261px;
+            width: 287px;
+            bottom: 27px;
+            left: 20px;
+            z-index: -1;
+        }
+
+        .form-group {
+            width: auto;
+            margin-right: 25px;
+        }
+
+
+        .magzi-price {
+            width: 150px;
+        }
+    }
+}
 
 
 
@@ -402,6 +477,16 @@
             }
         }
     }
+    .ask-magzi {
+
+        padding-top: 61px;
+        padding-bottom: 99px;
+
+
+        &:after {
+            left: 140px;
+        }
+    }
 }
 
 
@@ -422,6 +507,17 @@
                     margin-right: 20px;
                 }
             }
+        }
+    }
+}
+
+
+@media(min-width: 1340px){
+
+    .ask-magzi {
+
+        &:after {
+            left: 260px;
         }
     }
 }
