@@ -6694,8 +6694,14 @@ button.bg-sand:focus {
 .w-25 {
   width: 25% !important; }
 
+.w-35 {
+  width: 35% !important; }
+
 .w-50 {
   width: 50% !important; }
+
+.w-65 {
+  width: 65% !important; }
 
 .w-75 {
   width: 75% !important; }
@@ -6709,8 +6715,14 @@ button.bg-sand:focus {
 .h-25 {
   height: 25% !important; }
 
+.h-35 {
+  height: 35% !important; }
+
 .h-50 {
   height: 50% !important; }
+
+.h-65 {
+  height: 65% !important; }
 
 .h-75 {
   height: 75% !important; }

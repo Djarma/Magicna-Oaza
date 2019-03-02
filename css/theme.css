@@ -1242,5 +1242,71 @@ footer:after {
     .register h1 {
       font-size: 3.5rem;
       margin-bottom: 44px; } }
+.checkout .checkout-cart {
+  font-family: "GothamRounded-Book";
+  padding-top: 30px; }
+  .checkout .checkout-cart .checkout-cart-info {
+    flex-direction: column;
+    font-family: "GothamRounded-Book"; }
+    .checkout .checkout-cart .checkout-cart-info .price h4, .checkout .checkout-cart .checkout-cart-info .delivery h4 {
+      font-size: 1rem !important; }
+    .checkout .checkout-cart .checkout-cart-info .final-price h2 {
+      font-size: 1.25rem !important; }
+  .checkout .checkout-cart .checkout-cart-products {
+    border-bottom: 2px solid #cfcfcf;
+    overflow: scroll;
+    height: 470px; }
+    .checkout .checkout-cart .checkout-cart-products .checkout-cart-item {
+      margin-bottom: 25px; }
+      .checkout .checkout-cart .checkout-cart-products .checkout-cart-item .checkout-item-photo {
+        display: block; }
+        .checkout .checkout-cart .checkout-cart-products .checkout-cart-item .checkout-item-photo img {
+          width: 100px;
+          height: 100px;
+          background-color: #F9F9F9;
+          border-radius: 12px; }
+    .checkout .checkout-cart .checkout-cart-products .checkout-cart-item-detail {
+      position: relative;
+      color: #CFCFCF; }
+      .checkout .checkout-cart .checkout-cart-products .checkout-cart-item-detail .detail-title {
+        font-size: 1.25rem;
+        font-family: "GothamRounded-Book"; }
+      .checkout .checkout-cart .checkout-cart-products .checkout-cart-item-detail p {
+        font-family: "GothamRounded-Bold"; }
+      .checkout .checkout-cart .checkout-cart-products .checkout-cart-item-detail .close-small-cart {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 25px;
+        height: 25px;
+        background: #F9F9F9;
+        border-radius: 50%; }
+  .checkout .checkout-cart .checkout-cart-action .btn {
+    width: 200px;
+    height: 55px;
+    border-radius: 36px;
+    line-height: 40px; }
+  .checkout .checkout-cart .checkout-cart-action .btn-warning {
+    font-size: 1.25;
+    color: #fff; }
+
+@media (min-width: 576px) {
+  .checkout .checkout-cart .checkout-cart-item-photo {
+    margin-right: 30px !important; }
+  .checkout .checkout-cart .detail-title {
+    font-size: 1.5rem !important; } }
+@media (min-width: 992px) {
+  .checkout .checkout-cart .checkout-item-photo img {
+    width: 150px !important;
+    height: 150px !important; }
+  .checkout .checkout-cart .checkout-cart-item-detail .detail-title {
+    font-size: 1.5rem !important; }
+  .checkout .checkout-cart .checkout-cart-info .price h4, .checkout .checkout-cart .checkout-cart-info .delivery h4 {
+    font-size: 1.5rem !important; }
+  .checkout .checkout-cart .checkout-cart-info .final-price h2 {
+    font-size: 1.8rem !important; } }
+@media (min-width: 1200px) {
+  .checkout .checkout-cart-item-detail {
+    padding-right: 150px; } }
 
 /*# sourceMappingURL=theme.css.map */
