@@ -18,77 +18,75 @@ footer {
     &:after {
         display: none;
     }
-    
+
     ul li a {
         line-height: 37px;
     }
 
-    .footer-social {
 
-        .footer-social-item {
 
-            a {
-                display: inline-block;
-                background: $red;
-                width: 33px;
-                height: 33px;
-                line-height: 33px;
-                text-align: center;
-                border-radius: 50%;
-                color: $sand;
-                border:1px solid $red;
-                transition: .2s linear;
-                margin-bottom: 10px;
-                margin-right: 14px;
+    .form-group {
 
-                &:hover {
-                    background: $sand;
-                    color: $red;
-                }
-            }
+        label {
+            margin-bottom: 14px;
         }
 
-
-        .form-group {
-
-            label {
-                margin-bottom: 14px;
-            }
-
-            input {
-                padding: 18px;
-                height: 54px;
-                text-align: left;
-            }
-
-            .btn-outline-secondary {
-
-                &:hover {
-                    background: transparent;
-                }
-            }
+        input {
+            padding: 18px;
+            height: 54px;
+            text-align: left;
         }
 
-        .btn-light {
-            font-size: 1.25rem;
-            padding: 17px 41px;
-            margin-bottom: 17px;
+        .btn-outline-secondary {
 
             &:hover {
-                background: #000;
-                color: #fff;
-                border-color: #000;
+                background: transparent;
             }
         }
     }
 
+    .btn-light {
+        font-size: 1.25rem;
+        padding: 17px 41px;
+        margin-bottom: 17px;
+
+        &:hover {
+            background: #000;
+            color: #fff;
+            border-color: #000;
+        }
+    }
+}
 
 
-    .copyright {
 
-        p {
-            font-family: $gotham-book;
-            margin-bottom: 0;
+.copyright {
+
+    p {
+        font-family: $gotham-book;
+        margin-bottom: 0;
+    }
+}
+
+.social-item {
+
+    a {
+        display: inline-block;
+        background: $red;
+        width: 33px;
+        height: 33px;
+        line-height: 33px;
+        text-align: center;
+        border-radius: 50%;
+        color: $sand;
+        border:1px solid $red;
+        transition: .2s linear;
+        margin-bottom: 10px;
+        margin-right: 14px;
+
+        &:hover {
+            background: $sand;
+            color: $red;
         }
     }
 }

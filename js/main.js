@@ -244,6 +244,30 @@ $(document).ready(function () {
     }
 
 
+// SINGLE PRODUCT SECTION
+
+$('.single-product-tabulator').on('click', '.description', function (e) {
+         e.preventDefault();
+         $('.tab-description').show();
+         $('.tab-paymant').hide();
+         $('.tab-delivery').hide();
+    });
+    
+$('.single-product-tabulator').on('click', '.paymant', function (e) {
+         e.preventDefault();
+         $('.tab-description').hide();
+         $('.tab-delivery').hide();
+         $('.tab-paymant').show();
+    });
+    
+$('.single-product-tabulator').on('click', '.delivery', function (e) {
+         e.preventDefault();
+         $('.tab-description').hide();
+         $('.tab-paymant').hide();
+         $('.tab-delivery').show();
+    });
+
+
 
 
 });//end document.ready

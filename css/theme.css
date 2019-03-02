@@ -991,41 +991,43 @@ footer {
     display: none; }
   footer ul li a {
     line-height: 37px; }
-  footer .footer-social .footer-social-item a {
-    display: inline-block;
-    background: #FF151F;
-    width: 33px;
-    height: 33px;
-    line-height: 33px;
-    text-align: center;
-    border-radius: 50%;
-    color: #FFE19C;
-    border: 1px solid #FF151F;
-    transition: .2s linear;
-    margin-bottom: 10px;
-    margin-right: 14px; }
-    footer .footer-social .footer-social-item a:hover {
-      background: #FFE19C;
-      color: #FF151F; }
-  footer .footer-social .form-group label {
+  footer .form-group label {
     margin-bottom: 14px; }
-  footer .footer-social .form-group input {
+  footer .form-group input {
     padding: 18px;
     height: 54px;
     text-align: left; }
-  footer .footer-social .form-group .btn-outline-secondary:hover {
+  footer .form-group .btn-outline-secondary:hover {
     background: transparent; }
-  footer .footer-social .btn-light {
+  footer .btn-light {
     font-size: 1.25rem;
     padding: 17px 41px;
     margin-bottom: 17px; }
-    footer .footer-social .btn-light:hover {
+    footer .btn-light:hover {
       background: #000;
       color: #fff;
       border-color: #000; }
-  footer .copyright p {
-    font-family: "GothamRounded-Book";
-    margin-bottom: 0; }
+
+.copyright p {
+  font-family: "GothamRounded-Book";
+  margin-bottom: 0; }
+
+.social-item a {
+  display: inline-block;
+  background: #FF151F;
+  width: 33px;
+  height: 33px;
+  line-height: 33px;
+  text-align: center;
+  border-radius: 50%;
+  color: #FFE19C;
+  border: 1px solid #FF151F;
+  transition: .2s linear;
+  margin-bottom: 10px;
+  margin-right: 14px; }
+  .social-item a:hover {
+    background: #FFE19C;
+    color: #FF151F; }
 
 .login {
   padding: 155px 0 300px 0;
@@ -1088,5 +1090,103 @@ footer:after {
   footer:after {
     bottom: 120%;
     left: 210px; } }
+.single-product {
+  padding-top: 70px;
+  padding-bottom: 100px; }
+  .single-product .breadcrumb {
+    background: none;
+    font-size: 0.8rem; }
+    .single-product .breadcrumb a {
+      font-family: "GothamRounded-Book"; }
+    .single-product .breadcrumb .breadcrumb-item.active {
+      font-family: "GothamRounded-Bold"; }
+  .single-product .single-product-item-detail {
+    margin-bottom: 36px; }
+    .single-product .single-product-item-detail h1 {
+      font-size: 2rem; }
+    .single-product .single-product-item-detail .lead {
+      font-size: 0.8rem; }
+  .single-product .single-product-item-price {
+    margin-bottom: 50px; }
+    .single-product .single-product-item-price h6 {
+      font-size: 0.8rem;
+      margin-bottom: 26px; }
+    .single-product .single-product-item-price .btn-warning:hover {
+      background: #fff;
+      color: #FFC302 !important;
+      border-color: 1px solid #FFC302 !important; }
+  .single-product .contact {
+    margin-bottom: 100px; }
+    .single-product .contact .fa-phone {
+      width: 50px;
+      height: 50px;
+      font-size: 48px; }
+  .single-product .social-item a {
+    color: #fff; }
+    .single-product .social-item a:hover {
+      background: #fff;
+      color: #FF151F; }
+  .single-product .single-product-tabulator .tab-nav {
+    font-size: 0.8rem; }
+    .single-product .single-product-tabulator .tab-nav ul {
+      border-bottom: 2px solid #CFCFCF; }
+      .single-product .single-product-tabulator .tab-nav ul li {
+        display: inline-block;
+        border-bottom: 2px solid transparent;
+        transition: 0.4s linear;
+        position: relative;
+        top: 2px; }
+        .single-product .single-product-tabulator .tab-nav ul li:hover {
+          border-bottom: 2px solid #FFC302;
+          position: relative;
+          top: 2px; }
+  .single-product .single-product-tabulator .tab-description {
+    font-size: 0.8rem; }
+    .single-product .single-product-tabulator .tab-description ul {
+      padding-top: 10px;
+      padding-left: 10px; }
+  .single-product .single-product-tabulator .tab-paymant {
+    display: none; }
+  .single-product .single-product-tabulator .tab-delivery {
+    display: none; }
+
+@media (min-width: 450px) {
+  .single-product {
+    padding-top: 110px; }
+    .single-product .tab-nav {
+      font-size: 1rem !important; }
+      .single-product .tab-nav ul li {
+        margin-right: 10px; }
+    .single-product .tab-description {
+      font-size: 1rem !important; } }
+@media (min-width: 576px) {
+  .single-product {
+    padding-top: 150px; }
+    .single-product .single-product-photo {
+      margin-top: -60px; } }
+@media (min-width: 992px) {
+  .single-product {
+    padding-top: 195px; }
+    .single-product .breadcrumb {
+      font-size: 1.25rem;
+      margin-bottom: 60px; }
+    .single-product .single-product-item-detail {
+      margin-bottom: 56px; }
+      .single-product .single-product-item-detail h1 {
+        font-size: 3rem !important; }
+      .single-product .single-product-item-detail .lead {
+        font-size: 1.25rem; }
+    .single-product .single-product-item-price {
+      margin-bottom: 104px; }
+      .single-product .single-product-item-price h2 {
+        font-size: 3rem; }
+    .single-product .single-product-photo {
+      margin-top: -100px; }
+    .single-product .tab-nav {
+      font-size: 1.25rem !important; } }
+@media (min-width: 1200px) {
+  .single-product .single-product-item-detail h1 {
+    max-width: 500px;
+    font-size: 3.5rem; } }
 
 /*# sourceMappingURL=theme.css.map */
