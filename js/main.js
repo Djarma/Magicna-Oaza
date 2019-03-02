@@ -32,12 +32,18 @@ $(document).ready(function () {
         animation();
     });
 
+
+    $('.wobble').hover(function () {
+        $(this).toggleClass('wobble-hor-bottom');
+    });
+
+
     // SUBMENU
 
-    $('.navbar-nav').on('click', '.toggler-1', function (e) {
+    $('.navbar-nav').on('click', '.toggle-submenu', function (e) {
         e.preventDefault();
-        $('.toggle-submenu').toggleClass('fa-angle-down fa-angle-up');
-        $('.toggle-submenu').parent().next('.submenu').slideToggle();
+        $(this).toggleClass('fa-angle-down fa-angle-up');
+        $(this).parent().next('.submenu').slideToggle();
         $('.search-form').slideUp();
     });
 
@@ -115,6 +121,7 @@ $(document).ready(function () {
             dots: false,
             loop: true,
             autoplay: true,
+            autoplayHoverPause: true,
             responsive: {
                 0: {
                     items: 1
@@ -160,6 +167,7 @@ $(document).ready(function () {
         $('.toys-category-slider').owlCarousel({
             items: 1,
             dots: true,
+            nav: false,
             margin: 30,
             responsive: {
                 0: {

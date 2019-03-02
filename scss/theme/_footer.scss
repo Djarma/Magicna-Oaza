@@ -1,2 +1,90 @@
+footer {
+    position: relative;
+    padding-top: 67px;
+    padding-bottom: 41px;
+    font-family: $gotham-bold !important;
 
+    &:before {
+        content: '';
+        background: url(../img/sand.png);
+        position: absolute;
+        bottom: 100%;
+        left:0;
+        width: 100%;
+        height: 166px;
+    }
+
+    ul li a {
+        line-height: 37px;
+    }
+
+    .footer-social {
+
+        .footer-social-item {
+
+            a {
+                display: inline-block;
+                background: $red;
+                width: 33px;
+                height: 33px;
+                line-height: 33px;
+                text-align: center;
+                border-radius: 50%;
+                color: $sand;
+                border:1px solid $red;
+                transition: .2s linear;
+                margin-bottom: 10px;
+                margin-right: 14px;
+
+                &:hover {
+                    background: $sand;
+                    color: $red;
+                }
+            }
+        }
+
+
+        .form-group {
+
+            label {
+                margin-bottom: 14px;
+            }
+
+            input {
+                padding: 18px;
+                height: 54px;
+                text-align: left;
+            }
+
+            .btn-outline-secondary {
+
+                &:hover {
+                    background: transparent;
+                }
+            }
+        }
+
+        .btn-light {
+            font-size: 1.25rem;
+            padding: 17px 41px;
+            margin-bottom: 17px;
+
+            &:hover {
+                background: #000;
+                color: #fff;
+                border-color: #000;
+            }
+        }
+    }
+    
+    
+    
+    .copyright {
+        
+        p {
+            font-family: $gotham-book;
+            margin-bottom: 0;
+        }
+    }
+}
 

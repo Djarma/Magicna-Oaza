@@ -5,7 +5,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 1;
-    
+
     .container {
         max-width: 1620px;
         padding: 0 10px;
@@ -20,10 +20,7 @@ header {
                 border-radius: 20px;
                 padding: 5px 10px;
                 font-size: .8rem;
-
-                span {
-                    display: none;
-                }
+                display: none;
             }
 
             .search {
@@ -146,6 +143,42 @@ header {
                     }
                 }
             }
+
+            .user {
+                margin-left: 3px;
+
+                .fa {
+                    font-size: 20px;
+                    position: relative;
+                    top: 2px;
+                }
+
+                .dropdown-menu {
+                    border-radius: 36px 0 36px 36px;
+                    top: 50px;
+                    left: -160px;
+                    border-color: $orange;
+                    z-index: 0;
+                }
+
+                .dropdown-item {
+                    border-radius: 36px 0 0 0;
+                    border-color: $red;
+                    background: transparent;
+                    border-bottom: 1px solid $orange;
+                    padding: 10px 15px;
+                    text-align: center;
+
+                    &:hover {
+                        color: $orange;
+                    }
+
+                    &:focus {
+                        color: $red;
+                        background: none;
+                    }
+                }
+            }
         }
         .navbar-toggler {
             padding: 0.15rem 0.55rem;
@@ -179,8 +212,13 @@ header {
 
             .header-action {
 
-                .btn {
+                a.btn {
                     font-size: 1rem;
+                    display: inline-block;
+
+                    span {
+                        display: none;
+                    }
                 }
 
                 img {
@@ -196,6 +234,14 @@ header {
                 .cart .num {
                     top: -7px;
                     right: -7px;
+                }
+
+                .user {
+                    margin-left: 7px;
+
+                    .fa {
+                        font-size: 24px;
+                    }
                 }
             }
         }
@@ -216,10 +262,6 @@ header {
 
                     padding: 6px 20px;
                     font-size: 1rem;
-
-                    span {
-                        display: inline-block;
-                    }
                 }
 
                 .search {
@@ -250,6 +292,14 @@ header {
                                 font-size: 1.5rem !important;
                             }
                         }
+                    }
+                }
+
+                .user {
+                    margin-left: 10px;
+
+                    .fa {
+                        font-size: 28px;
                     }
                 }
             }
@@ -314,6 +364,19 @@ header {
     }    
 }
 
+
+@media (min-width: 1200px) {
+    header {
+        a.btn {
+
+            span {
+                display: inline-block !important;
+
+            }
+
+        }
+    }
+}
 
 .body-overlay {
     position: fixed;

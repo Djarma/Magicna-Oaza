@@ -1,5 +1,6 @@
 
 
+
 .lead-slider-wrapper {
 
     .lead-slider {
@@ -89,6 +90,15 @@
     }
 }
 
+.most-popular {
+
+
+    .owl-nav {
+        display: none !important;
+    }
+
+}
+
 // new products 
 
 .new-products {
@@ -125,6 +135,8 @@
         right: 0px;
     }
 }
+
+
 .product-item {
 
     a {
@@ -200,6 +212,8 @@
     }
 }
 
+// TOYS CATEGORY
+
 .toys-category {
     margin-bottom: 68px;
 
@@ -230,6 +244,19 @@
         }
     }
 
+    .owl-nav {
+        display: none !important;
+    }
+
+    .owl-item {
+        opacity: 0.3;
+        transition: 0.4s linear;
+    }
+
+    .owl-item.active {
+        opacity: 1;
+        transition: 0.4s linear;
+    }
 }
 
 .toys-category-slider {
@@ -251,6 +278,9 @@
         max-width: 680px;
     }
 }
+
+
+// RECOMENDED SECTION
 
 
 .recomended-products {
@@ -380,7 +410,7 @@
 
 .category {
     padding-top: 35px;
-    padding-bottom: 40px;
+    padding-bottom: 110px;
 
 
     .section-title{
@@ -471,7 +501,7 @@
 
     .category {
         padding-top: 65px;
-        padding-bottom: 70px;
+        padding-bottom: 250px;
 
     }
 
