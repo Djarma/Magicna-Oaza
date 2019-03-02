@@ -244,18 +244,20 @@ and open the template in the editor.
             <!-- login section start --> 
             <section class="login">
                 <div class="container">
-                    <div class="login-item mx-auto">
-                        <h1>Prijavite se</h1>
-                        <form>
-                            <div class="form-group">
+                    <div class="login-item mx-auto text-center">
+                        <h1 class="text-center">Prijavite se</h1>
+                        <form class="login-form">
+                            <div class="form-group text-left">
                                 <label class="text-uppercase" for="email">email</label>
-                                <input class="form-control" type="email" id="email" placeholder="example@gmail.com">
+                                <input class="form-control" type="email" name="email" id="email" value='' placeholder="example@gmail.com">
+                                <div class="error-msg"></div>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group text-left mb-5">
                                 <label class="text-uppercase" for="pass">lozinka</label>
-                                <input class="form-control" type="password" id="pass" placeholder="example@gmail.com">
+                                <input class="form-control" type="password" name="password" value='' id="pass" placeholder="*********">
+                                <div class="error-msg"></div>
                             </div>
-                            <button class="btn btn-warning">Potvrdi</button>
+                            <button type="submit" class="btn btn-warning text-white">Potvrdi</button>
                         </form>
                     </div>
                 </div>
@@ -326,14 +328,54 @@ and open the template in the editor.
             </div>
         </footer><!-- footer ends --> 
         <!--SCRIPTS goes here-->
+
         <!--First jquery, then popper and finaly bootstrap-->
         <script src="js/jquery.min.js" type="text/javascript"></script>
         <script src="js/popper.js" type="text/javascript"></script>
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
 
+        <script src="js/jquery.validate.min.js" type="text/javascript"></script>
         <script src="js/owl.carousel.js" type="text/javascript"></script>
         <script src="js/select2.min.js" type="text/javascript"></script>
         <!--All page js-->
         <script src="js/main.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.login-form').validate({
+                    highlight: function (element) {
+                        $(element).closest('.form-group').addClass('has-danger');
+                        $(element).addClass('form-control-danger');
+                    },
+                    unhighlight: function (element) {
+                        $(element).closest('.form-group').removeClass('has-danger').addClass('has-success');
+                        $(element).removeClass('form-control-danger').addClass('form-control-success');
+                    },
+                    rules: {
+                        email: {
+                            required: true,
+                            email: true
+                        },
+                        password: {
+                            required: true,
+                            minlength: 6
+                        }
+                    },
+                    messages: {
+                        email: {
+                            required: 'Email je obavezno polje',
+                            email: 'Molimo unesite validan Email'
+                        },
+                        password: {
+                            required: 'Password je obavezno polje',
+                            minlength: 'Minimalno mora imati 6 karaktera'
+                        }
+                    },
+                    errorElement: 'p',
+                    errorPlacement: function (error, element) {
+                        error.appendTo($(element).closest('.form-group').find('.error-msg'));
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
