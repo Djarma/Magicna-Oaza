@@ -27,6 +27,10 @@
         }
     }
 
+    .owl-nav {
+        display: none !important;
+    }
+
     .owl-dots {
 
         position: absolute;
@@ -68,6 +72,10 @@
         align-items: center;
         justify-content: center;
         margin: 0 15px;
+    }
+
+    .owl-nav {
+        display: none !important;
     }
 }
 

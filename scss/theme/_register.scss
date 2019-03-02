@@ -1,23 +1,82 @@
 .register {
-    padding-top: 195px;
-    padding-bottom: 300px;
-    
+    padding-top: 110px;
+    padding-bottom: 150px;
+
+
     .register-form {
         max-width: 800px;
-        
+
         fieldset {
-            
+
             label {
-                
+
                 text-transform: uppercase;
                 letter-spacing: 3.7px;
                 font-size: 0.8rem;
             }
-            
+
             input {
                 font-family: $gotham-bold;
                 padding: 20px;
             }
+        }
+        .form-check {
+            margin-bottom: 20px;
+
+            input:checkbox {
+                width: 29px;
+                height: 29px;
+            }
+
+            label {
+                font-family: $gotham-book;
+                font-size: 0.8rem;
+
+                input[type=checkbox]{
+                    width: 0;
+                    visibility: hidden;
+                }
+
+                .custom-cb {
+                    width: 29px;
+                    height: 29px;
+                    border: 2px solid $purple;
+                    border-radius: 5px;
+                    position: absolute;
+                    top: 0;
+                    left: 0px;
+
+                    .fa {
+                        position: relative;
+                        transform: translateX(50%);
+                        line-height: 22px;
+                        color: $purple;
+                        visibility: hidden;
+                    }
+                }
+
+                input[type=checkbox]:checked ~ .custom-cb .fa {
+                    visibility: visible;
+                }
+
+            }
+        }
+
+        .btn-warning {
+            padding: 17px 56px;
+            font-family: $gotham-bold;
+        }
+    }
+}
+
+@media(min-width: 768px) {
+    .register {
+        padding-top: 195px;
+        padding-bottom: 300px;
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 44px;
         }
     }
 }

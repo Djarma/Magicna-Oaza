@@ -646,6 +646,8 @@ header {
     color: #fff;
     font-size: 1rem;
     padding: 15px 39px; }
+.lead-slider-wrapper .owl-nav {
+  display: none !important; }
 .lead-slider-wrapper .owl-dots {
   position: absolute;
   bottom: 20px;
@@ -672,6 +674,8 @@ header {
     align-items: center;
     justify-content: center;
     margin: 0 15px; }
+  .toys-wrapper .owl-nav {
+    display: none !important; }
 
 .section-title {
   position: relative;
@@ -1189,8 +1193,8 @@ footer:after {
     max-width: 500px;
     font-size: 3.5rem; } }
 .register {
-  padding-top: 195px;
-  padding-bottom: 300px; }
+  padding-top: 110px;
+  padding-bottom: 150px; }
   .register .register-form {
     max-width: 800px; }
     .register .register-form fieldset label {
@@ -1200,5 +1204,43 @@ footer:after {
     .register .register-form fieldset input {
       font-family: "GothamRounded-Bold";
       padding: 20px; }
+    .register .register-form .form-check {
+      margin-bottom: 20px; }
+      .register .register-form .form-check input:checkbox {
+        width: 29px;
+        height: 29px; }
+      .register .register-form .form-check label {
+        font-family: "GothamRounded-Book";
+        font-size: 0.8rem; }
+        .register .register-form .form-check label input[type=checkbox] {
+          width: 0;
+          visibility: hidden; }
+        .register .register-form .form-check label .custom-cb {
+          width: 29px;
+          height: 29px;
+          border: 2px solid #8759F2;
+          border-radius: 5px;
+          position: absolute;
+          top: 0;
+          left: 0px; }
+          .register .register-form .form-check label .custom-cb .fa {
+            position: relative;
+            transform: translateX(50%);
+            line-height: 22px;
+            color: #8759F2;
+            visibility: hidden; }
+        .register .register-form .form-check label input[type=checkbox]:checked ~ .custom-cb .fa {
+          visibility: visible; }
+    .register .register-form .btn-warning {
+      padding: 17px 56px;
+      font-family: "GothamRounded-Bold"; }
+
+@media (min-width: 768px) {
+  .register {
+    padding-top: 195px;
+    padding-bottom: 300px; }
+    .register h1 {
+      font-size: 3.5rem;
+      margin-bottom: 44px; } }
 
 /*# sourceMappingURL=theme.css.map */
