@@ -1188,5 +1188,17 @@ footer:after {
   .single-product .single-product-item-detail h1 {
     max-width: 500px;
     font-size: 3.5rem; } }
+.register {
+  padding-top: 195px;
+  padding-bottom: 300px; }
+  .register .register-form {
+    max-width: 800px; }
+    .register .register-form fieldset label {
+      text-transform: uppercase;
+      letter-spacing: 3.7px;
+      font-size: 0.8rem; }
+    .register .register-form fieldset input {
+      font-family: "GothamRounded-Bold";
+      padding: 20px; }
 
 /*# sourceMappingURL=theme.css.map */

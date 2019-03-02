@@ -1,0 +1,23 @@
+.register {
+    padding-top: 195px;
+    padding-bottom: 300px;
+    
+    .register-form {
+        max-width: 800px;
+        
+        fieldset {
+            
+            label {
+                
+                text-transform: uppercase;
+                letter-spacing: 3.7px;
+                font-size: 0.8rem;
+            }
+            
+            input {
+                font-family: $gotham-bold;
+                padding: 20px;
+            }
+        }
+    }
+}

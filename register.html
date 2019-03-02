@@ -241,7 +241,112 @@ and open the template in the editor.
         </header><!-- header ends -->
         <!-- main start --> 
         <main>
-            
+            <div class="register">
+                <div class="container">
+                    <h1 class="text-center">Registracija</h1>
+                    <form class="register-form mx-auto">
+                        <fieldset class="row">
+                            <div class="form-group col-md-6">
+                                <label for="name" class="text-purple">ime</label>
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Marija">
+                                <div class="error-msg"></div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="prezime" class="text-purple">prezime</label>
+                                <input type="text" name="prezime" class="form-control" id="prezime" placeholder="Marijanovic">
+                                <div class="error-msg"></div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="row">
+                            <div class="form-group col-md-6">
+                                <label for="ulica">ulica</label>
+                                <input type="text" name="ulica" class="form-control" id="ulica" placeholder="">
+                                <div class="error-msg"></div>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="broj">broj</label>
+                                <input type="text" name="broj" class="form-control" id="broj" placeholder="">
+                                <div class="error-msg"></div>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="postanski-br">POŠTANSKI BR.</label>
+                                <input type="text" name="postanski-br" class="form-control" id="postanski-br" placeholder="">
+                                <div class="error-msg"></div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="row">
+                            <div class="form-group col-md-3">
+                                <label for="ulaz">ulaz</label>
+                                <input type="text" name="ulaz" class="form-control" id="ulaz" placeholder="">
+                                <div class="error-msg"></div>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="sprat">sprat</label>
+                                <input type="text" name="sprat" class="form-control" id="sprat" placeholder="">
+                                <div class="error-msg"></div>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="stan">stan</label>
+                                <input type="text" name="stan" class="form-control" id="stan" placeholder="">
+                                <div class="error-msg"></div>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="telefon">telefon</label>
+                                <input type="text" name="telefon" class="form-control" id="telefon" placeholder="">
+                                <div class="error-msg"></div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="row">
+                            <div class="form-group col-md-6">
+                                <label for="email" class="text-purple">email</label>
+                                <input type="email" name="email" class="form-control" id="email" placeholder="marija@gmail.com">
+                                <div class="error-msg"></div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="password" class="text-purple">lozinka</label>
+                                <input type="password" name="password" class="form-control" id="password" placeholder="*******">
+                                <div class="error-msg"></div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="row">
+                            <div class="captcha col-md-6">
+
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="re-password" class="text-purple">ponovi lozinku</label>
+                                <input type="password" name="re-password" class="form-control" id="re-password" placeholder="*******">
+                                <div class="error-msg"></div>
+                            </div>
+                            <p class="small text-warning px-3">Molimo Vas štiklirajte opciju nisam robot, koju koristimo radi zaštite od spama.</p>
+                        </fieldset>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="obavestenja">
+                                <label class="form-check-label" for="obavestenja">
+                                    Želim da primam obaveštenja o akcijama i uslugama
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="uslovi">
+                                <label class="form-check-label" for="uslovi">
+                                    Upoznat/a sam sa uslovima kupovine Magična 
+                                    Oaza Internet prodavnice i prihvatam ih.*
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="uslovi">
+                                <label class="form-check-label" for="uslovi">
+                                    Nakon što sam se upoznao/upoznala sa navedenim
+                                    obaveštenjem i isto u potpunosti razumeo/
+                                    razumela, izjavljujem da dajem pristanak za
+                                    navedenu obradu podataka o ličnosti
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-warning text-white">Potvrdi</button>
+                    </form>
+                </div>
+            </div>
         </main> <!-- main ends --> 
         <!-- footer start --> 
         <footer class="bg-sand">
@@ -312,9 +417,105 @@ and open the template in the editor.
         <script src="js/popper.js" type="text/javascript"></script>
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
 
+        <script src="js/jquery.validate.min.js" type="text/javascript"></script>
         <script src="js/owl.carousel.js" type="text/javascript"></script>
         <script src="js/select2.min.js" type="text/javascript"></script>
         <!--All page js-->
-        <script src="js/main.js" type="text/javascript"></script>
+        <script src="js/main.js" type="text/javascript"></script><script type="text/javascript">
+            $(document).ready(function () {
+                $('.register-form').validate({
+                    highlight: function (element) {
+                        $(element).closest('.form-group').addClass('has-danger');
+                        $(element).addClass('form-control-danger');
+                    },
+                    unhighlight: function (element) {
+                        $(element).closest('.form-group').removeClass('has-danger').addClass('has-success');
+                        $(element).removeClass('form-control-danger').addClass('form-control-success');
+                    },
+                    rules: {
+                        name: {
+                            required: true,
+                            rangelength: [2, 20]
+                        },
+                        prezime: {
+                            required: true,
+                            rangelength: [2, 20]
+                        },
+                        ulica: {
+                            required: true,
+                            minlength: 6
+                        },
+                        broj: {
+                            required: true,
+                            number: true
+                        },
+                        'postanski-br': {
+                            required: true,
+                            number: true
+                        },
+                        telefon: {
+                            required: true,
+                            number: true
+                        },
+                        email: {
+                            required: true,
+                            email: true
+                        },
+                        password: {
+                            required: true,
+                            minlength: 6
+                        },
+                        're-password': {
+                            required: true,
+                            minlength: 6,
+                            equalTo: "#password"
+                        }
+                    },
+                    messages: {
+                        name: {
+                            required: 'Ime je obavezno polje',
+                            rangelength: 'Mora imati minimum izmedju 2 i 20 karaktera'
+                        },
+                        prezime: {
+                            required: 'Prezime je obavezno polje',
+                            rangelength: 'Mora imati minimum izmedju 2 i 20 karaktera'
+                        },
+                        ulica: {
+                            required: 'Unesite validnu adresu',
+                            minlength: 'Mora imati minimum 6 karaktera'
+                        },
+                        broj: {
+                            required: 'Broj je obavezno polje',
+                            number: 'Morate uneti validan broj'
+                        },
+                        'postanski-br': {
+                            required: 'Unesite validan postanski broj',
+                            number: 'Morate uneti validan broj'
+                        },
+                        telefon: {
+                            required: 'Telefon je obavezno polje',
+                            number: 'Unesite validan broj telefona'
+                        },
+                        email: {
+                            required: 'Email je obavezno polje',
+                            email: 'Unesite validnu email adresu'
+                        },
+                        password: {
+                            required: 'Lozinka je obavezno polje',
+                            minlength: 'Mora imati minimum 6 karaktera'
+                        },
+                        're-password': {
+                            required: 'Ponovite lozinku',
+                            minlength: 'Mora imati minimum 6 karaktera',
+                            equalTo: 'Lozinke se ne poklapaju!'
+                        }
+                    },
+                    errorElement: 'p',
+                    errorPlacement: function (error, element) {
+                        error.appendTo($(element).closest('.form-group').find('.error-msg'));
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
