@@ -3,6 +3,7 @@ footer {
     padding-top: 67px;
     padding-bottom: 41px;
     font-family: $gotham-bold !important;
+    z-index: 1;
 
     &:before {
         content: '';
@@ -76,11 +77,11 @@ footer {
             }
         }
     }
-    
-    
-    
+
+
+
     .copyright {
-        
+
         p {
             font-family: $gotham-book;
             margin-bottom: 0;

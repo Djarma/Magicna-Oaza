@@ -899,7 +899,8 @@ footer {
   position: relative;
   padding-top: 67px;
   padding-bottom: 41px;
-  font-family: "GothamRounded-Bold" !important; }
+  font-family: "GothamRounded-Bold" !important;
+  z-index: 1; }
   footer:before {
     content: '';
     background: url(../img/sand.png);
@@ -945,5 +946,36 @@ footer {
   footer .copyright p {
     font-family: "GothamRounded-Book";
     margin-bottom: 0; }
+
+.login {
+  padding: 195px 0 300px 0;
+  position: relative; }
+  .login:after {
+    content: '';
+    background: url(../img/bgshape.png);
+    width: 100%;
+    height: 198px;
+    position: absolute;
+    bottom: 80px;
+    left: 0; }
+  .login:before {
+    content: '';
+    background: #8759F2;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: -100px;
+    left: 0; }
+  .login .login-item {
+    max-width: 420px; }
+
+footer:after {
+  content: '';
+  background: url(../img/magzi.png);
+  width: 287px;
+  height: 261px;
+  position: absolute;
+  bottom: 120%;
+  left: 209px; }
 
 /*# sourceMappingURL=theme.css.map */
