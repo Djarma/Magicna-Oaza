@@ -79,6 +79,8 @@
 // product galler section 
 
 .product-gallery {
+    position: relative;
+    z-index: -1;
     padding-bottom: 260px;
     
     .col-md-3 {
@@ -106,7 +108,7 @@
     .products{
         position: sticky;
         position: -webkit-sticky;
-        z-index: 10;
+        z-index: 0;
 
         .products-search {
 
