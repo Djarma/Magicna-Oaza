@@ -1360,6 +1360,45 @@ footer:after {
   .product-gallery .col-md-3 {
     margin-bottom: 73px; }
 
+.rangeslider {
+  background: transparent; }
+
+.rangeslider__handle {
+  width: 18px;
+  height: 18px;
+  border: none;
+  top: -7px !important; }
+
+.rangeslider--horizontal {
+  height: 3px;
+  position: relative; }
+  .rangeslider--horizontal:before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background: #8759F2;
+    position: absolute;
+    top: -7px;
+    z-index: 1; }
+
+.rangeslider__fill {
+  background: #fff; }
+
+.range-output {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding-top: 4px;
+  margin-bottom: 20px; }
+  .range-output:before {
+    content: '0 - ';
+    text-transform: uppercase; }
+  .range-output:after {
+    content: ' rsd';
+    text-transform: uppercase; }
+
 @media (min-width: 450px) {
   .products {
     top: 90px;
