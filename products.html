@@ -33,6 +33,7 @@ and open the template in the editor.
         <!--external css, like plugins ...-->
         <link href="css/owl.carousel.css" rel="stylesheet" type="text/css"/>
         <link href="css/select2.css" rel="stylesheet" type="text/css"/>
+        <link href="css/rangeslider.css" rel="stylesheet" type="text/css"/>
         <!--theme css-->
         <link href="css/theme.css" rel="stylesheet" type="text/css"/>
 
@@ -241,9 +242,63 @@ and open the template in the editor.
         </header><!-- header ends -->
         <!-- main start --> 
         <main>
-            
-            
-            
+            <!-- products search start --> 
+            <section class="products bg-purple">
+                <div class="container">
+                    <form class="form-row">
+                        <fieldset class="col-xm-6 col-lg-2">
+                            <div class="form-group products-search">
+                                <label for="pretraga">pretraga</label>
+                                <div class="input-group">
+                                    <input id="pretraga" type="text" class="form-control" placeholder="Ključna reč" aria-describedby="product-search">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-light" type="button" id="product-search"><span class="fa fa-search"></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="col-xm-6 col-lg-2">
+                            <div class="form-group">
+                                <label>brend</label>
+                                <select class="product-select">
+                                    <option value="">Ylvi & The Minim...</option>
+                                    <option value="">Olsa & The Minim...</option>
+                                    <option value="">Jbls & The Minim...</option>
+                                </select>
+                            </div>
+                        </fieldset>
+                        <fieldset class="col-xm-6 col-lg-2">
+                            <div class="form-group">
+                                <label>Kategorije</label>
+                                <select class="product-select">
+                                    <option value="">Igracke</option>
+                                    <option value="">Plaza</option> 
+                                </select>
+                            </div>
+                        </fieldset>
+                        <fieldset class="col-xm-6 col-lg-2  product-age">
+                            <div class="form-group">
+                                <label>uzrast</label>
+                                <select class="product-select">
+                                    <option value="">0-12M</option>
+                                    <option value="">12-36M</option> 
+                                </select>
+                            </div>
+                        </fieldset>
+                        <fieldset class="col-xm-6 col-lg-2">
+                            <div class="form-group">
+                                <label>cena</label>
+                                <input type="range" min="0" max="3000" step="100" value="300" data-rangeslider=''>
+                            </div>
+                        </fieldset>
+                        <fieldset class="col-xm-6 col-lg-2 align-self-center">
+                            <button type="button" class="btn btn-warning">Pretraži</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </section><!-- products search ends --> 
+
+
         </main> <!-- main ends --> 
         <!-- footer start --> 
         <footer class="bg-sand">
@@ -314,6 +369,7 @@ and open the template in the editor.
         <script src="js/popper.js" type="text/javascript"></script>
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
 
+        <script src="js/rangeslider.min.js" type="text/javascript"></script>
         <script src="js/owl.carousel.js" type="text/javascript"></script>
         <script src="js/select2.min.js" type="text/javascript"></script>
         <!--All page js-->

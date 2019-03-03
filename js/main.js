@@ -270,6 +270,17 @@ $('.single-product-tabulator').on('click', '.delivery', function (e) {
 
 
 
+    if ($('.product-select').length > 0) {
+
+        $('.product-select').select2({
+            minimumResultsForSearch: -1,
+            dropdownAutoWidth: true,
+            width: 'auto'
+        });
+
+    }
+
+
 });//end document.ready
 
 
