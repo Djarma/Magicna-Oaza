@@ -32,9 +32,13 @@ $(document).ready(function () {
         animation();
     });
 
-
+//
+//    $('.wobble').hover(function () {
+//        $(this).toggleClass('wobble-hor-bottom');
+//    });
+//    
     $('.wobble').hover(function () {
-        $(this).toggleClass('wobble-hor-bottom');
+        $(this).toggleClass('toy-animate');
     });
 
 
