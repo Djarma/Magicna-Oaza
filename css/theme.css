@@ -488,6 +488,8 @@ header {
       top: 80px;
       display: none;
       width: 100%; }
+    header .container .header-action .search .btn {
+      background: #fff; }
     header .container .header-action .cart {
       position: relative; }
       header .container .header-action .cart .num {
@@ -505,13 +507,13 @@ header {
       header .container .header-action .cart .small-cart {
         position: fixed;
         top: 0;
-        right: -1000px;
+        right: -600px;
         height: 100vh;
         overflow: scroll;
         max-width: 260px;
         padding: 0 10px;
         font-family: "GothamRounded-Book";
-        transition: 1s linear;
+        transition: 0.5s ease-in-out;
         z-index: 1000; }
         header .container .header-action .cart .small-cart.active {
           right: 0; }
@@ -701,7 +703,8 @@ header {
   .lead-slider-wrapper .owl-dots .owl-dot span {
     width: 12px;
     height: 12px;
-    margin-right: 10px; }
+    margin-right: 10px;
+    background: #fff; }
 
 .owl-carousel {
   z-index: 0; }
@@ -709,7 +712,8 @@ header {
 .toys-wrapper {
   padding: 18px 0 15px 0;
   position: relative;
-  margin-bottom: 105px; }
+  margin-bottom: 105px;
+  top: 70px; }
   .toys-wrapper .toys-slider-item {
     width: 120px;
     height: 78px;
@@ -717,8 +721,6 @@ header {
     align-items: center;
     justify-content: center;
     margin: 0 15px; }
-  .toys-wrapper .owl-stage-outer {
-    top: 85px; }
   .toys-wrapper .owl-nav {
     display: none !important; }
 
@@ -890,7 +892,8 @@ header {
     display: block; }
   .ask-magzi .btn {
     height: 55px;
-    display: inline-block; }
+    display: inline-block;
+    border: none; }
   .ask-magzi .btn-warning {
     font-family: "GothamRounded-Bold";
     padding-left: 29px;
@@ -993,7 +996,8 @@ header {
     margin-right: 15px; }
 
   .toys-wrapper {
-    padding: 38px 0 25px 0; }
+    padding: 38px 0 25px 0;
+    margin-bottom: 130px; }
 
   .product-item a {
     width: 305px;
@@ -1036,8 +1040,6 @@ footer {
     left: 0;
     width: 100%;
     height: 166px; }
-  footer:after {
-    display: none; }
   footer ul li a {
     line-height: 37px; }
   footer .form-group label {
@@ -1111,7 +1113,7 @@ footer {
       padding: 17px 56px;
       margin-bottom: 16px; }
 
-footer:after {
+.footer:after {
   content: '';
   background: url(../img/magzi.png);
   width: 287px;
@@ -1132,11 +1134,11 @@ footer:after {
   .login button {
     margin-bottom: 66px; }
 
-  footer:after {
+  .footer:after {
     bottom: 110%;
     left: 150px; } }
 @media (min-width: 1340px) {
-  footer:after {
+  .footer:after {
     bottom: 120%;
     left: 210px; } }
 .single-product {
@@ -1190,6 +1192,8 @@ footer:after {
         transition: 0.4s linear;
         position: relative;
         top: 2px; }
+        .single-product .single-product-tabulator .tab-nav ul li.active {
+          border-bottom: 2px solid #FFC302; }
         .single-product .single-product-tabulator .tab-nav ul li:hover {
           border-bottom: 2px solid #FFC302;
           position: relative;

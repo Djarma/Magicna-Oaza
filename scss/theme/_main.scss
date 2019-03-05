@@ -32,7 +32,7 @@
     .owl-stage-outer {
         top: 85px;
     }
-    
+
     .owl-nav {
         display: none !important;
     }
@@ -54,6 +54,7 @@
                 width: 12px;
                 height: 12px;
                 margin-right: 10px;
+                background: #fff;
             }
         }
     }
@@ -69,6 +70,7 @@
     padding: 18px 0 15px 0;
     position: relative;
     margin-bottom: 105px;
+    top: 70px;
 
     .toys-slider-item {
 
@@ -80,10 +82,7 @@
         margin: 0 15px;
     }
 
-    .owl-stage-outer {
-        top: 85px;
-    }
-    
+
     .owl-nav {
         display: none !important;
     }
@@ -290,6 +289,7 @@
         .owl-dot:hover span {
             background: $purple;
         }
+
     }
 
     .toys-category-slider-item {
@@ -332,6 +332,7 @@
             position: absolute;
             right: 0px;
         }
+
     }
 }
 
@@ -373,6 +374,7 @@
     .btn {
         height: 55px;
         display: inline-block;
+        border: none;
     }
 
     .btn-warning {
@@ -560,6 +562,7 @@
 
     .toys-wrapper {
         padding: 38px 0 25px 0;
+        margin-bottom: 130px;
     }
 
     .product-item {

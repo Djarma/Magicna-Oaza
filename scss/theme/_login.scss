@@ -44,7 +44,7 @@
     }   
 }
 
-footer {
+.footer {
 
     &:after {
         content: '';
@@ -81,7 +81,7 @@ footer {
         }
     }
 
-    footer {
+    .footer {
 
         &:after {
             bottom: 110%;
@@ -92,7 +92,7 @@ footer {
 
 @media (min-width: 1340px){
 
-    footer {
+    .footer {
 
         &:after {
             bottom: 120%;

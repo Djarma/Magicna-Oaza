@@ -263,6 +263,8 @@ $(document).ready(function () {
         $('.tab-description').show();
         $('.tab-paymant').hide();
         $('.tab-delivery').hide();
+        $('.single-product-tabulator .description').parent().addClass('active');
+        $('.single-product-tabulator .delivery, .single-product-tabulator .paymant').parent().removeClass('active');
     });
 
     $('.single-product-tabulator').on('click', '.paymant', function (e) {
@@ -270,6 +272,8 @@ $(document).ready(function () {
         $('.tab-description').hide();
         $('.tab-delivery').hide();
         $('.tab-paymant').show();
+        $('.single-product-tabulator .paymant').parent().addClass('active');
+        $('.single-product-tabulator .description, .single-product-tabulator .delivery').parent().removeClass('active');
     });
 
     $('.single-product-tabulator').on('click', '.delivery', function (e) {
@@ -277,6 +281,8 @@ $(document).ready(function () {
         $('.tab-description').hide();
         $('.tab-paymant').hide();
         $('.tab-delivery').show();
+        $('.single-product-tabulator .delivery').parent().addClass('active');
+        $('.single-product-tabulator .description, .single-product-tabulator .paymant').parent().removeClass('active');
     });
 
 

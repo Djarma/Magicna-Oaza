@@ -46,15 +46,15 @@
         }
 
     }
-    
+
     .single-product-photo {
-        
+
         figure {
-            
+
             background: $gray-100;
             border-radius: 12px;
         }
-        
+
         img {
             border-radius: 12px;
         }
@@ -85,6 +85,7 @@
 
     .single-product-tabulator {
 
+
         .tab-nav {
             font-size: 0.8rem;
 
@@ -98,11 +99,17 @@
                     position: relative;
                     top: 2px;
 
+
+                    &.active {
+                        border-bottom: 2px solid $yellow;
+                    }
+
                     &:hover{
                         border-bottom: 2px solid $yellow;
                         position: relative;
                         top: 2px;
                     }
+
                 }
             }
 
