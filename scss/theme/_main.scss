@@ -9,7 +9,9 @@
     }
 
     .lead-slider-item {
-        padding: 166px 0 76px 0;
+        padding: 166px 0 76px 0 !important;
+        background-size: cover !important; 
+        background-position: center bottom !important;
 
         .caption {
             max-width: 400px;
@@ -27,6 +29,10 @@
         }
     }
 
+    .owl-stage-outer {
+        top: 85px;
+    }
+    
     .owl-nav {
         display: none !important;
     }
@@ -34,7 +40,7 @@
     .owl-dots {
 
         position: absolute;
-        bottom: 20px;
+        bottom: -50px;
         left: 50%;
         transform: translateX(-50%);
 
@@ -74,6 +80,10 @@
         margin: 0 15px;
     }
 
+    .owl-stage-outer {
+        top: 85px;
+    }
+    
     .owl-nav {
         display: none !important;
     }
@@ -600,7 +610,7 @@
     .lead-slider-wrapper {
 
         .lead-slider-item {
-            padding: 266px 0 76px 0;
+            padding: 280px 0 76px 0;
 
         }
 

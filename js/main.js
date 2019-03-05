@@ -42,9 +42,17 @@ $(document).ready(function () {
     });
 
 
+
     // SUBMENU
 
     $('.navbar-nav').on('click', '.toggle-submenu', function (e) {
+        e.preventDefault();
+        $(this).toggleClass('fa-angle-down fa-angle-up');
+        $(this).parent().next('.submenu').slideToggle();
+        $('.search-form').slideUp();
+    });
+    
+    $('.navbar-nav').on('click', '.toggle-submenu-sm', function (e) {
         e.preventDefault();
         $(this).toggleClass('fa-angle-down fa-angle-up');
         $(this).parent().next('.submenu').slideToggle();

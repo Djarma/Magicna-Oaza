@@ -5,6 +5,15 @@ header {
     left: 0;
     width: 100%;
     z-index: 10;
+    
+    
+    &.active {
+        
+        &:after {
+            top: 0;
+            bottom: -260px;
+        }
+    }
 
     .container {
         max-width: 1620px;
@@ -188,7 +197,6 @@ header {
             display: none;
             padding-left: 10px !important;
             margin-bottom: 15px !important;
-
             .submenu-icon {
                 width: 30px;
                 margin-right: 20px; 

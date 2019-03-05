@@ -46,6 +46,19 @@
         }
 
     }
+    
+    .single-product-photo {
+        
+        figure {
+            
+            background: $gray-100;
+            border-radius: 12px;
+        }
+        
+        img {
+            border-radius: 12px;
+        }
+    }
 
     .contact {
         margin-bottom: 100px;

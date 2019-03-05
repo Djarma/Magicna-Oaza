@@ -30,6 +30,32 @@ input[type=number]::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance:textfield;
 }
+
+.contact-fixed {
+    position: fixed;
+    bottom: 52px;
+    right: 26px;
+    z-index: 3;
+    
+    .contact-fixed-item {
+        background: $yellow;
+        width: 239px;
+        height: 70px;
+        border-radius: 12px;
+        padding: 6px 12px;
+        
+        .fa {
+            font-size: 3rem;
+            color: #fff;
+            margin-right: 12px;
+        }
+        
+        .contact-number a {
+            color: #fff;
+            font-size: 1.25rem;
+        }
+    }
+}
 // Placeholder for image
 
 
