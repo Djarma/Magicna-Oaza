@@ -38,33 +38,38 @@ input[type=number] {
 
 .contact-fixed {
   position: fixed;
-  bottom: 65px;
-  right: 15px;
-  z-index: 3; }
+  bottom: 50px;
+  right: 20px;
+  z-index: 9; }
   .contact-fixed .contact-fixed-item {
+    width: 70px;
+    height: 70px;
     background: #FFC302;
-    width: 50px;
-    height: 50px;
     border-radius: 12px;
-    padding: 6px;
-    text-align: center;
-    transition: 0.2s linear; }
-    .contact-fixed .contact-fixed-item.active-sm {
-      width: 200px;
-      text-align: left; }
-      .contact-fixed .contact-fixed-item.active-sm.contact-fixed-item .contact-number {
-        display: inline-block; }
+    position: relative;
+    cursor: pointer; }
     .contact-fixed .contact-fixed-item .fa {
-      font-size: 2rem;
       color: #fff;
-      line-height: 40px;
-      cursor: pointer;
-      margin-right: 10px; }
-    .contact-fixed .contact-fixed-item .contact-number {
-      overflow: hidden; }
-    .contact-fixed .contact-fixed-item .contact-number-item a {
-      color: #fff;
-      font-size: 1rem; }
+      position: absolute;
+      font-size: 3.5rem !important;
+      line-height: 70px;
+      left: 50%;
+      transform: translateX(-50%); }
+    .contact-fixed .contact-fixed-item .contact-number-item {
+      visibility: hidden;
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%); }
+      .contact-fixed .contact-fixed-item .contact-number-item a {
+        color: #fff;
+        font-size: 1.25rem; }
+    .contact-fixed .contact-fixed-item.active-sm {
+      width: 239px; }
+      .contact-fixed .contact-fixed-item.active-sm .fa {
+        left: 35px; }
+      .contact-fixed .contact-fixed-item.active-sm .contact-number-item {
+        visibility: visible; }
 
 .img-holder {
   position: relative;
@@ -89,6 +94,17 @@ input[type=number] {
     left: 0;
     width: 100%; }
 
+@media (min-width: 992px) {
+  .contact-fixed {
+    position: fixed;
+    bottom: 50px;
+    right: 20px; }
+    .contact-fixed .contact-fixed-item {
+      width: 239px; }
+      .contact-fixed .contact-fixed-item .fa {
+        left: 35px; }
+      .contact-fixed .contact-fixed-item .contact-number-item {
+        visibility: visible; } }
 /* Buzz Out */
 @-webkit-keyframes buzz {
   10% {
@@ -486,7 +502,7 @@ header {
     padding: 0 10px; }
     header .container .navbar-brand {
       max-width: 30%; }
-    header .container .header-action a.btn {
+    header .container .header-action a.btn-danger {
       border-radius: 20px;
       padding: 5px 10px;
       font-size: .8rem;
@@ -544,31 +560,33 @@ header {
           border-bottom: 2px solid #cfcfcf;
           height: 470px;
           padding-bottom: 20px; }
-          header .container .header-action .cart .small-cart .small-cart-products .small-cart-item .small-cart-item-photo {
-            margin-right: 25px; }
-            header .container .header-action .cart .small-cart .small-cart-products .small-cart-item .small-cart-item-photo a {
-              display: flex;
-              width: 95px;
-              height: 95px;
-              background: #F9F9F9 !important;
-              border-radius: 12px;
-              align-items: center; }
-          header .container .header-action .cart .small-cart .small-cart-products .small-cart-item .small-cart-item-detail {
+          header .container .header-action .cart .small-cart .small-cart-products .small-cart-item {
             position: relative; }
-            header .container .header-action .cart .small-cart .small-cart-products .small-cart-item .small-cart-item-detail .detail-title {
-              font-size: 1rem;
-              font-family: "GothamRounded-Book" !important; }
-            header .container .header-action .cart .small-cart .small-cart-products .small-cart-item .small-cart-item-detail p {
-              font-family: "GothamRounded-Bold"; }
-            header .container .header-action .cart .small-cart .small-cart-products .small-cart-item .small-cart-item-detail .close-small-cart {
-              position: absolute;
-              top: 0;
-              right: 0;
-              width: 25px;
-              height: 25px;
-              background: #F9F9F9;
-              border-radius: 50%;
-              text-align: center; }
+            header .container .header-action .cart .small-cart .small-cart-products .small-cart-item .small-cart-item-photo {
+              margin-right: 25px; }
+              header .container .header-action .cart .small-cart .small-cart-products .small-cart-item .small-cart-item-photo a {
+                display: flex;
+                width: 95px;
+                height: 95px;
+                background: #F9F9F9 !important;
+                border-radius: 12px;
+                align-items: center; }
+            header .container .header-action .cart .small-cart .small-cart-products .small-cart-item .small-cart-item-detail {
+              width: 150px; }
+              header .container .header-action .cart .small-cart .small-cart-products .small-cart-item .small-cart-item-detail .detail-title {
+                font-size: 1rem;
+                font-family: "GothamRounded-Book" !important; }
+              header .container .header-action .cart .small-cart .small-cart-products .small-cart-item .small-cart-item-detail p {
+                font-family: "GothamRounded-Bold"; }
+              header .container .header-action .cart .small-cart .small-cart-products .small-cart-item .small-cart-item-detail .close-small-cart {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 25px;
+                height: 25px;
+                background: #F9F9F9;
+                border-radius: 50%;
+                text-align: center; }
         header .container .header-action .cart .small-cart .small-cart-action .btn {
           width: 200px;
           height: 55px;
@@ -677,7 +695,8 @@ header {
         width: 150px !important;
         height: 150px !important; }
     header .container .header-action .cart .small-cart .small-cart-item-detail {
-      padding-right: 100px; }
+      padding-right: 100px;
+      width: 350px !important; }
       header .container .header-action .cart .small-cart .small-cart-item-detail .detail-title {
         font-size: 1.5rem !important; }
   header .container .header-action .user {
@@ -710,16 +729,16 @@ header {
 @media (min-width: 450px) and (min-width: 1200px) {
   header a.btn span {
     display: inline-block !important; } }
-@media (min-width: 450px) {
-  .body-overlay {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: rgba(79, 79, 79, 0.38);
-    top: 0;
-    left: 0;
-    z-index: 100;
-    display: none; } }
+.body-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(79, 79, 79, 0.38);
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: none; }
+
 main {
   margin-top: 70px; }
 
@@ -1385,53 +1404,54 @@ footer {
     .register h1 {
       font-size: 3.5rem;
       margin-bottom: 44px; } }
-.checkout .checkout-cart {
-  font-family: "GothamRounded-Book";
-  padding-top: 30px; }
-  .checkout .checkout-cart .checkout-cart-info {
-    flex-direction: column;
-    font-family: "GothamRounded-Book"; }
-    .checkout .checkout-cart .checkout-cart-info .price h4, .checkout .checkout-cart .checkout-cart-info .delivery h4 {
-      font-size: 1rem !important; }
-    .checkout .checkout-cart .checkout-cart-info .final-price h2 {
-      font-size: 1.25rem !important; }
-  .checkout .checkout-cart .checkout-cart-products {
-    border-bottom: 2px solid #cfcfcf;
-    overflow: scroll;
-    height: 470px; }
-    .checkout .checkout-cart .checkout-cart-products .checkout-cart-item {
-      margin-bottom: 25px; }
-      .checkout .checkout-cart .checkout-cart-products .checkout-cart-item .checkout-item-photo {
-        display: block; }
-        .checkout .checkout-cart .checkout-cart-products .checkout-cart-item .checkout-item-photo img {
-          width: 100px;
-          height: 100px;
-          background-color: #F9F9F9;
-          border-radius: 12px; }
-    .checkout .checkout-cart .checkout-cart-products .checkout-cart-item-detail {
-      position: relative;
-      color: #CFCFCF; }
-      .checkout .checkout-cart .checkout-cart-products .checkout-cart-item-detail .detail-title {
-        font-size: 1.25rem;
-        font-family: "GothamRounded-Book"; }
-      .checkout .checkout-cart .checkout-cart-products .checkout-cart-item-detail p {
-        font-family: "GothamRounded-Bold"; }
-      .checkout .checkout-cart .checkout-cart-products .checkout-cart-item-detail .close-small-cart {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 25px;
-        height: 25px;
-        background: #F9F9F9;
-        border-radius: 50%; }
-  .checkout .checkout-cart .checkout-cart-action .btn {
-    width: 200px;
-    height: 55px;
-    border-radius: 36px;
-    line-height: 40px; }
-  .checkout .checkout-cart .checkout-cart-action .btn-warning {
-    font-size: 1.25;
-    color: #fff; }
+.checkout {
+  padding-top: 150px; }
+  .checkout .checkout-cart {
+    font-family: "GothamRounded-Book";
+    padding-top: 30px; }
+    .checkout .checkout-cart .checkout-cart-info {
+      flex-direction: column;
+      font-family: "GothamRounded-Book"; }
+      .checkout .checkout-cart .checkout-cart-info .price h4, .checkout .checkout-cart .checkout-cart-info .delivery h4 {
+        font-size: 1rem !important; }
+      .checkout .checkout-cart .checkout-cart-info .final-price h2 {
+        font-size: 1.25rem !important; }
+    .checkout .checkout-cart .checkout-cart-products {
+      border-bottom: 2px solid #cfcfcf;
+      height: 470px; }
+      .checkout .checkout-cart .checkout-cart-products .checkout-cart-item {
+        margin-bottom: 25px; }
+        .checkout .checkout-cart .checkout-cart-products .checkout-cart-item .checkout-item-photo {
+          display: block; }
+          .checkout .checkout-cart .checkout-cart-products .checkout-cart-item .checkout-item-photo img {
+            width: 100px;
+            height: 100px;
+            background-color: #F9F9F9;
+            border-radius: 12px; }
+      .checkout .checkout-cart .checkout-cart-products .checkout-cart-item-detail {
+        position: relative;
+        color: #CFCFCF; }
+        .checkout .checkout-cart .checkout-cart-products .checkout-cart-item-detail .detail-title {
+          font-size: 1.25rem;
+          font-family: "GothamRounded-Book"; }
+        .checkout .checkout-cart .checkout-cart-products .checkout-cart-item-detail p {
+          font-family: "GothamRounded-Bold"; }
+        .checkout .checkout-cart .checkout-cart-products .checkout-cart-item-detail .close-small-cart {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 25px;
+          height: 25px;
+          background: #F9F9F9;
+          border-radius: 50%; }
+    .checkout .checkout-cart .checkout-cart-action .btn {
+      width: 200px;
+      height: 55px;
+      border-radius: 36px;
+      line-height: 40px; }
+    .checkout .checkout-cart .checkout-cart-action .btn-warning {
+      font-size: 1.25;
+      color: #fff; }
 
 @media (min-width: 576px) {
   .checkout .checkout-cart .checkout-cart-item-photo {
@@ -1451,10 +1471,34 @@ footer {
 @media (min-width: 1200px) {
   .checkout .checkout-cart-item-detail {
     padding-right: 150px; } }
+main {
+  position: relative; }
+
 .products {
-  position: relative;
+  position: fixed !important;
   padding: 20px 0;
-  font-family: "GothamRounded-Bold"; }
+  font-family: "GothamRounded-Bold";
+  z-index: 10;
+  left: calc(-100vw + 20px);
+  top: 70px;
+  height: calc(100vh - 70px);
+  width: calc(100vw - 20px);
+  border-radius: 0 12px 0 0; }
+  .products .toggle-filter {
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    top: 70px;
+    right: -20px;
+    font-size: 2.5rem;
+    cursor: pointer;
+    background: #875fee;
+    border-radius: 0 12px 12px 0;
+    color: #fff;
+    padding: 0 0 0 2px;
+    line-height: 35px; }
+  .products.active-filter {
+    left: 0; }
   .products form label {
     display: block;
     color: #fff;
@@ -1479,7 +1523,7 @@ footer {
   .products .btn-warning {
     color: #fff;
     height: 55px;
-    width: 230px; }
+    width: 100%; }
 
 .select2 {
   width: 100% !important; }
@@ -1571,7 +1615,9 @@ footer {
 
 @media (min-width: 450px) {
   .products {
-    padding: 32px 0; } }
+    padding: 32px 0;
+    top: 90px;
+    height: calc(100vh - 90px); } }
 @media (min-width: 576px) {
   .product-filter {
     padding: 15px 0; } }
@@ -1579,7 +1625,12 @@ footer {
   .products {
     position: sticky;
     position: -webkit-sticky;
-    z-index: 1; }
+    z-index: 1;
+    left: 0;
+    top: 116px;
+    height: 176px;
+    width: 100%;
+    border-radius: 0; }
     .products .products-search input {
       height: 55px; }
     .products .select2-container--default .select2-selection--single {
@@ -1589,7 +1640,8 @@ footer {
       top: 15px; }
 
   .product-filter {
-    padding: 36px 0; }
+    padding: 36px 0;
+    margin-top: 300px; }
     .product-filter .product-filter-item label {
       max-width: 411px;
       border-radius: 12px;

@@ -33,52 +33,57 @@ input[type=number] {
 
 .contact-fixed {
     position: fixed;
-    bottom: 65px;
-    right: 15px;
-    z-index: 3;
-
+    bottom: 50px;
+    right: 20px;
+    z-index: 9 ;
 
     .contact-fixed-item {
+        width: 70px;
+        height: 70px;
         background: $yellow;
-        width: 50px;
-        height: 50px;
         border-radius: 12px;
-        padding: 6px;
-        text-align: center;
-        transition: 0.2s linear;
-
-
-        &.active-sm {
-            width: 200px;
-            text-align: left;
-            
-            &.contact-fixed-item .contact-number{
-                display: inline-block;
-            }
-        }
+        position: relative;
+        cursor: pointer;
 
         .fa {
-            font-size: 2rem;
             color: #fff;
-            line-height: 40px;
-            cursor: pointer;
-            margin-right: 10px;
-        }
-        
-        .contact-number {
-            overflow: hidden;
-            
+            position: absolute;
+            font-size: 3.5rem !important;
+            line-height: 70px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .contact-number-item {
+            visibility: hidden;
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
 
             a {
                 color: #fff;
-                font-size: 1rem;
+                font-size: 1.25rem;
+            }
+        }
+
+        &.active-sm {
+            width: 239px;
+
+            .fa {
+                left: 35px;
+            }
+
+            .contact-number-item {
+                visibility: visible;
+
+
             }
         }
     }
 }
+
+
 // Placeholder for image
 
 
@@ -119,3 +124,23 @@ input[type=number] {
     }
 }
 
+@media(min-width: 992px) {
+
+    .contact-fixed {
+        position: fixed;
+        bottom: 50px;
+        right: 20px;
+
+        .contact-fixed-item {
+            width: 239px;
+
+            .fa {
+                left: 35px;
+            }
+
+            .contact-number-item {
+                visibility: visible;
+            }
+        }
+    }
+}

@@ -80,12 +80,12 @@ $(document).ready(function () {
     });
 
     //fixed contact 
-    
+
     $('.contact-fixed').on('click', '.contact-fixed-item', function (e) {
         e.preventDefault();
         $(this).toggleClass('active-sm');
     })
-    
+
 
     // SEARCH 
 
@@ -107,13 +107,24 @@ $(document).ready(function () {
         $('.search-form').slideUp();
         $('.submenu').slideUp();
         $('.toggle-submenu').removeClass('fa-angle-up').addClass('fa-angle-down');
+        $('.products').removeClass('active-filter');
     });
 
     $('.body-overlay').click(function () {
         $('.small-cart').removeClass('active');
         $('.body-overlay').hide();
+        $('.products').removeClass('active-filter');
     });
 
+    // PRODUCT FILTER
+
+    $('.products').on('click', '.toggle-filter', function (e) {
+        e.preventDefault();
+        $(this).toggleClass('fa-angle-right fa-angle-left');
+        $('.products').toggleClass('active-filter');
+        $('.cart .small-cart').removeClass('active');
+        $('.body-overlay').show();
+    });
 
     // OWL CAROUSEL
 
@@ -328,7 +339,6 @@ $(document).ready(function () {
 
     $('input[type="range"]').rangeslider({
         polyfill: false,
-        
 
         onInit: function () {
             this.output = $('<div class="range-output" />').insertBefore(this.$range).html(this.$element.val());

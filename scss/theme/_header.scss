@@ -25,7 +25,7 @@ header {
 
         .header-action {
 
-            a.btn {
+            a.btn-danger {
                 border-radius: 20px;
                 padding: 5px 10px;
                 font-size: .8rem;
@@ -114,6 +114,7 @@ header {
 
                         .small-cart-item {
 
+                            position: relative;
                             .small-cart-item-photo {
                                 margin-right: 25px;
 
@@ -128,7 +129,7 @@ header {
                             }
 
                             .small-cart-item-detail {
-                                position: relative;
+                                width: 150px;
 
                                 .detail-title {
                                     font-size: 1rem;
@@ -365,6 +366,8 @@ header {
 
                             .small-cart-item-detail {
                                 padding-right: 100px;
+                                width: 350px !important;
+
 
                                 .detail-title {
                                     font-size: 1.5rem !important;
@@ -455,14 +458,15 @@ header {
         }
     }
 
-    .body-overlay {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background: rgba(79,79,79,0.38);
-        top: 0;
-        left: 0;
-        z-index: 100;
-        display: none; 
-    }
+}
+
+.body-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(79,79,79,0.38);
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: none; 
 }

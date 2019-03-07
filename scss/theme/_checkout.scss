@@ -1,5 +1,6 @@
 .checkout {
-
+    padding-top: 150px; 
+    
     .checkout-cart {
         font-family: $gotham-book;
         padding-top: 30px;
@@ -18,7 +19,6 @@
 
         .checkout-cart-products {
             border-bottom: 2px solid #cfcfcf;
-            overflow: scroll;
             height: 470px;
 
             .checkout-cart-item {

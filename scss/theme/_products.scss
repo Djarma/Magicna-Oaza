@@ -1,9 +1,36 @@
-.products {
+main {
     position: relative;
+}
+
+.products {
+    position: fixed !important;
     padding: 20px 0;
     font-family: $gotham-bold;
+    z-index: 10;
+    left: calc(-100vw + 20px);
+    top: 70px;
+    height: calc(100vh - 70px);
+    width: calc(100vw - 20px);
+    border-radius: 0 12px 0 0;
 
-    
+    .toggle-filter {
+        position: absolute;
+        width: 20px;
+        height: 40px;
+        top: 70px;
+        right: -20px;
+        font-size: 2.5rem;
+        cursor: pointer;
+        background: $purple;
+        border-radius: 0 12px 12px 0;
+        color: #fff;   
+        padding: 0 0 0 2px;
+        line-height: 35px;
+    }
+    &.active-filter {
+        left: 0;
+    }
+
     form {
 
         label {
@@ -45,7 +72,7 @@
     .btn-warning {
         color: #fff;
         height: 55px;
-        width: 230px;
+        width: 100%;
 
     }
 }
@@ -186,7 +213,8 @@
 @media(min-width: 450px) {
     .products {
         padding: 32px 0;
-
+        top: 90px;
+        height: calc(100vh - 90px);
     }
 
 }
@@ -202,7 +230,12 @@
         position: sticky;
         position: -webkit-sticky;
         z-index: 1;
-
+        left: 0;
+        top: 116px;
+        height: 176px;
+        width: 100%;
+        border-radius: 0;
+        
         .products-search {
 
             input {
@@ -223,6 +256,7 @@
 
     .product-filter {
         padding: 36px 0;
+        margin-top: 300px;
 
         .product-filter-item{
 
