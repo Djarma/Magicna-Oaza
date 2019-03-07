@@ -1,5 +1,7 @@
 
-
+main {
+    margin-top: 70px;
+}
 
 .lead-slider-wrapper {
 
@@ -29,9 +31,6 @@
         }
     }
 
-    .owl-stage-outer {
-        top: 85px;
-    }
 
     .owl-nav {
         display: none !important;
@@ -40,7 +39,7 @@
     .owl-dots {
 
         position: absolute;
-        bottom: -50px;
+        bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
 
@@ -66,11 +65,16 @@
     z-index: 0;
 }
 
+.owl-carousel .owl-nav [class*="owl-"]:hover {
+    background: none;
+    color: #000;
+    text-decoration: none;
+}
+
 .toys-wrapper {
     padding: 18px 0 15px 0;
     position: relative;
-    margin-bottom: 105px;
-    top: 70px;
+    margin-bottom: 55px;
 
     .toys-slider-item {
 
@@ -93,7 +97,7 @@
 .section-title {
     position: relative;
     display: inline-block;
-    margin-bottom: 91px;
+    margin-bottom: 56px;
 
     &:before {
         content: '';
@@ -120,7 +124,7 @@
 
 .new-products {
     position: relative;
-    margin-bottom: 106px ;
+    margin-bottom: 55px ;
 
     .section-title {
 
@@ -134,7 +138,7 @@
 .owl-nav {
     display: block !important;
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 0;
     width: 100%;
 
@@ -159,9 +163,11 @@
     a {
         background: #f9f9f9;
         border-radius: 12px;
-        width: 285px;
-        height: 285px;
+        width: 240px;
+        height: 240px;
         font-family: $gotham-book !important;
+        position: relative;
+        margin: 0 auto;
     }
 
     .sticker-wrapper {
@@ -224,7 +230,7 @@
         }
 
         .new-price {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
         }
     }
 }
@@ -302,7 +308,7 @@
 
 
 .recomended-products {
-    padding-bottom: 87px;
+    padding-bottom: 47px;
 
     .section-title {
         margin-bottom: 67px;
@@ -315,7 +321,7 @@
     .owl-nav {
         display: block !important;
         position: absolute;
-        top: 40%;
+        top: 30%;
         left: 0;
         width: 100%;
 
@@ -395,7 +401,10 @@
         top: 13px;
         right: 10px;
     }
-
+    
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        line-height: 33px;
+    }
 }
 
 .select2-container .select2-dropdown {
@@ -486,10 +495,26 @@
 
 
 
+@media(min-width: 450px){
+
+    main {
+        margin-top: 85px;
+    }
+}
+
 
 @media(min-width: 576px){
 
+    main {
+        margin-top: 105px;
+    }
 
+    .owl-nav {
+
+        .owl-prev {
+            left: -5px;
+        }
+    }
 
     .ask-magzi {
 
@@ -530,6 +555,11 @@
 
 
 @media(min-width: 768px){
+
+    main {
+        margin-top: 115px;
+    }
+
     .lead-slider-wrapper {
 
         .lead-slider-item {
@@ -547,6 +577,8 @@
             }
         }
 
+
+
         .owl-dots {
 
             .owl-dot {
@@ -562,39 +594,35 @@
 
     .toys-wrapper {
         padding: 38px 0 25px 0;
-        margin-bottom: 130px;
     }
 
     .product-item {
 
-        a {
-            width: 305px;
-            height: 305px;
-        }
-    }
-    .new-products {
+        .price {
 
-        .owl-prev {
-            left: -25px !important;
-        }
-
-        .owl-next {
-            right: -25px !important;
-        }
-    }
-
-    .recomended-products {
-        .owl-nav {
-
-            .owl-prev {
-                left: -25px !important;
+            .old-price, .new-price {
+                font-family: $gotham-bold;
             }
 
-            .owl-next {
-                right: -25px !important;
+            .old-price {
+                color: #9B9B9B;
+                font-size: .8rem;
+            }
+
+            .new-price {
+                font-size: 1.3rem;
             }
         }
     }
+
+    .owl-prev {
+        left: -17px !important;
+    }
+
+    .owl-next {
+        right: -17px !important;
+    }
+
     .ask-magzi {
 
         padding-top: 61px;
@@ -603,6 +631,12 @@
 
         &:after {
             left: 140px;
+        }
+    }
+
+    .owl-nav {
+        .fa {
+            font-size: 2rem !important;
         }
     }
 }
@@ -627,15 +661,41 @@
             }
         }
     }
+    .product-item {
+
+        a {
+            width: 275px;
+            height: 275px;
+        }
+
+        .price {
+
+            .old-price {
+                color: #9B9B9B;
+                font-size: 1rem;
+            }
+
+            .new-price {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
 }
-
-
-@media(min-width: 1340px){
+@media(min-width: 1400px){
 
     .ask-magzi {
 
         &:after {
-            left: 260px;
+            left: 160px;
+        }
+    }
+
+    .product-item {
+
+        a {
+            width: 305px;
+            height: 305px;
         }
     }
 }

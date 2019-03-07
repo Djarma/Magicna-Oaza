@@ -43,9 +43,10 @@ footer {
     }
 
     .btn-light {
-        font-size: 1.25rem;
+        font-size: 1rem;
         padding: 17px 41px;
         margin-bottom: 17px;
+        align-self: center !important;
 
         &:hover {
             background: #000;
@@ -88,3 +89,20 @@ footer {
     }
 }
 
+@media(min-width: 768px){
+
+    footer {
+        .btn-light {
+            align-self: end !important;
+        }
+    }
+}
+
+@media(min-width: 992px){
+
+    footer {
+        .btn-light {
+            font-size: 1.25rem !important;
+        }
+    }
+}

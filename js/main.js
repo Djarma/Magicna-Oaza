@@ -9,6 +9,13 @@ $(document).ready(function () {
         }, 800);
     });
 
+    // CUSTOM SCROLLBAR
+    $(window).on("load", function () {
+        $(".content").mCustomScrollbar({
+            theme: "dark"
+        });
+    });
+    (jQuery);
 
     // ANIMATION 
 
@@ -51,7 +58,13 @@ $(document).ready(function () {
         $(this).parent().next('.submenu').slideToggle();
         $('.search-form').slideUp();
     });
-    
+
+    $('.toggler-1').hover(function (e) {
+        e.preventDefault();
+        $('.toggle-submenu').toggleClass('fa-angle-down fa-angle-up');
+        $('.toggle-submenu').parent().next('.submenu').slideToggle();
+    })
+
     $('.navbar-nav').on('click', '.toggle-submenu-sm', function (e) {
         e.preventDefault();
         $(this).toggleClass('fa-angle-down fa-angle-up');
@@ -63,9 +76,16 @@ $(document).ready(function () {
         e.preventDefault();
         $('.toggle-submenu-2').toggleClass('fa-angle-double-right fa-angle-double-left');
         $('.toggle-submenu-2').parent().next('.submenu-2').slideToggle();
+        $('.toggle-submenu-2-sm').toggleClass('fa-angle-double-down fa-angle-double-up');
     });
 
-
+    //fixed contact 
+    
+    $('.contact-fixed').on('click', '.contact-fixed-item', function (e) {
+        e.preventDefault();
+        $(this).toggleClass('active-sm');
+    })
+    
 
     // SEARCH 
 
@@ -114,13 +134,19 @@ $(document).ready(function () {
                 0: {
                     items: 2
                 },
+                450: {
+                    items: 3
+                },
                 576: {
+                    items: 5
+                },
+                768: {
                     items: 6
                 },
                 992: {
                     items: 8
                 },
-                1340: {
+                1400: {
                     items: 12
                 }
             }
@@ -132,19 +158,19 @@ $(document).ready(function () {
             items: 4,
             dots: false,
             loop: true,
-            autoplay: true,
+            margin: 30,
             autoplayHoverPause: true,
             responsive: {
                 0: {
                     items: 1
                 },
-                768: {
+                576: {
                     items: 2
                 },
-                992: {
+                768: {
                     items: 3
                 },
-                1340: {
+                1400: {
                     items: 4
                 }
             }
@@ -156,19 +182,20 @@ $(document).ready(function () {
             items: 4,
             dots: false,
             loop: true,
+            margin: 30,
             nav: true,
             navText: ['<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>'],
             responsive: {
                 0: {
                     items: 1
                 },
-                768: {
+                576: {
                     items: 2
                 },
-                992: {
+                768: {
                     items: 3
                 },
-                1340: {
+                1400: {
                     items: 4
                 }
             }
@@ -198,18 +225,19 @@ $(document).ready(function () {
             dots: false,
             loop: true,
             nav: true,
+            margin: 30,
             navText: ['<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>'],
             responsive: {
                 0: {
                     items: 1
                 },
-                768: {
+                576: {
                     items: 2
                 },
-                992: {
+                768: {
                     items: 3
                 },
-                1340: {
+                1400: {
                     items: 4
                 }
             }
@@ -228,13 +256,13 @@ $(document).ready(function () {
                 0: {
                     items: 1
                 },
-                768: {
+                576: {
                     items: 2
                 },
-                992: {
+                768: {
                     items: 3
                 },
-                1340: {
+                1400: {
                     items: 4
                 }
             }
@@ -300,6 +328,7 @@ $(document).ready(function () {
 
     $('input[type="range"]').rangeslider({
         polyfill: false,
+        
 
         onInit: function () {
             this.output = $('<div class="range-output" />').insertBefore(this.$range).html(this.$element.val());

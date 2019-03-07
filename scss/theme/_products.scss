@@ -1,10 +1,9 @@
 .products {
     position: relative;
-    top: 70px;
     padding: 20px 0;
     font-family: $gotham-bold;
 
-
+    
     form {
 
         label {
@@ -73,7 +72,6 @@
 
 .product-filter {
     padding: 5px 0;
-    margin-top: 70px;
     font-family: $gotham-bold;
     position: relative;
     z-index: 0;
@@ -125,7 +123,7 @@
 .product-gallery {
     position: relative;
     padding-bottom: 260px;
-    
+
 }
 
 //RANGESLIDER
@@ -187,23 +185,14 @@
 
 @media(min-width: 450px) {
     .products {
-        top: 90px;
         padding: 32px 0;
 
     }
 
-    .product-filter {
-        margin-top: 100px;
-    }
 }
 
 @media(min-width: 576px) {
-    .products {
-        top: 115px;
-
-    }
     .product-filter {
-        margin-top: 120px;
         padding: 15px 0;
     }
 }
@@ -243,10 +232,10 @@
                 padding-left: 23px;
                 position: relative;
                 font-size: 1rem;
-                
+
                 .close-filter {
-                right: 23px;
-            }
+                    right: 23px;
+                }
             }
 
         }
