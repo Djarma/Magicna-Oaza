@@ -155,36 +155,46 @@ main {
 
 //RANGESLIDER
 
-.rangeslider {
-    background: transparent;
-}
-
-.rangeslider__handle {
-    width: 18px;
-    height: 18px;
-    border: none;
-    top: -7px !important;
-}
-
-.rangeslider--horizontal {
+.nstSlider {
+    width: 100%;
+    background: #4F22BA;
     height: 3px;
-    position: relative;
+    margin-top: 15px;
 
-    &:before {
-        content: '';
+    .bar {
+        height: 3px;
+        top: 0;
+    }
+
+    .leftGrip, .rightGrip {
+        top: -7px;
         width: 18px;
         height: 18px;
-        border-radius: 50%;
+    }
+
+    .leftGrip {
+        background: #8759F2;
         border: 2px solid #fff;
-        background: $purple;
-        position: absolute;
-        top: -7px;
-        z-index: 1;
     }
 }
 
-.rangeslider__fill {
-    background: #fff;
+.leftLabel {
+    display: inline-block;
+    color: #fff;
+    margin-top: 10px;
+
+    &:after {
+        content: ' -';
+    }
+}
+
+.rightLabel {
+    display: inline-block;
+    color: #fff;
+
+    &:after {
+        content: ' RSD';
+    }
 }
 
 
@@ -235,7 +245,7 @@ main {
         height: 176px;
         width: 100%;
         border-radius: 0;
-        
+
         .products-search {
 
             input {

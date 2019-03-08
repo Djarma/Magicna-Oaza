@@ -57,13 +57,28 @@ $(document).ready(function () {
         $(this).toggleClass('fa-angle-down fa-angle-up');
         $(this).parent().next('.submenu').slideToggle();
         $('.search-form').slideUp();
+        $('header').removeClass('nav-hover');
     });
+
+
 
     $('.toggler-1').hover(function (e) {
         e.preventDefault();
-        $('.toggle-submenu').toggleClass('fa-angle-down fa-angle-up');
-        $('.toggle-submenu').parent().next('.submenu').slideToggle();
-    })
+        winWidth = $(window).width();
+
+        if (winWidth > 992) {
+            $('.toggle-submenu').removeClass('fa-angle-down').addClass('fa-angle-up');
+            $('.toggle-submenu').parent().next('.submenu').slideDown();
+            $('header').addClass('nav-hover').mouseleave(function () {
+                $('.toggle-submenu').removeClass('fa-angle-up').addClass('fa-angle-down');
+                $('.toggle-submenu').parent().next('.submenu').slideUp();
+                $('header').removeClass('nav-hover');
+            });
+        }
+
+    });
+
+
 
     $('.navbar-nav').on('click', '.toggle-submenu-sm', function (e) {
         e.preventDefault();
@@ -95,6 +110,7 @@ $(document).ready(function () {
         $('.body-overlay').hide(0);
         $('.submenu').slideUp();
         $('.toggle-submenu').removeClass('fa-angle-up').addClass('fa-angle-down');
+        $('header').removeClass('nav-hover');
     });
 
 
@@ -108,6 +124,7 @@ $(document).ready(function () {
         $('.submenu').slideUp();
         $('.toggle-submenu').removeClass('fa-angle-up').addClass('fa-angle-down');
         $('.products').removeClass('active-filter');
+        $('header').removeClass('nav-hover');
     });
 
     $('.body-overlay').click(function () {
@@ -123,7 +140,7 @@ $(document).ready(function () {
         $(this).toggleClass('fa-angle-right fa-angle-left');
         $('.products').toggleClass('active-filter');
         $('.cart .small-cart').removeClass('active');
-        $('.body-overlay').show();
+        $('.body-overlay').toggle();
     });
 
     // OWL CAROUSEL
@@ -337,14 +354,14 @@ $(document).ready(function () {
 
     }
 
-    $('input[type="range"]').rangeslider({
-        polyfill: false,
 
-        onInit: function () {
-            this.output = $('<div class="range-output" />').insertBefore(this.$range).html(this.$element.val());
-        },
-        onSlide: function (position, value) {
-            this.output.html(value);
+    $('.nstSlider').nstSlider({
+        "left_grip_selector": ".leftGrip",
+        "right_grip_selector": ".rightGrip",
+        "value_bar_selector": ".bar",
+        "value_changed_callback": function (cause, leftValue, rightValue) {
+            $(this).parent().find('.leftLabel').text(leftValue);
+            $(this).parent().find('.rightLabel').text(rightValue);
         }
     });
 

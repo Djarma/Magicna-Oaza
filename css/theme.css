@@ -494,9 +494,9 @@ header {
   left: 0;
   width: 100%;
   z-index: 10; }
-  header.active:after {
-    top: 0;
-    bottom: -260px; }
+  header.nav-hover {
+    height: 400px;
+    border-bottom: 3px solid #FF151F; }
   header .container {
     max-width: 1620px;
     padding: 0 10px; }
@@ -622,7 +622,8 @@ header {
           color: #FF151F;
           background: none; }
     header .container .navbar-toggler {
-      padding: 0.15rem 0.55rem; }
+      padding: 0.15rem 0.55rem;
+      border: none; }
     header .container .toggler-1 {
       position: relative; }
       header .container .toggler-1 .toggle-submenu-sm {
@@ -1463,14 +1464,14 @@ footer {
     width: 150px !important;
     height: 150px !important; }
   .checkout .checkout-cart .checkout-cart-item-detail .detail-title {
-    font-size: 1.5rem !important; }
+    font-size: 1.3rem !important; }
   .checkout .checkout-cart .checkout-cart-info .price h4, .checkout .checkout-cart .checkout-cart-info .delivery h4 {
-    font-size: 1.5rem !important; }
+    font-size: 1.3rem !important; }
   .checkout .checkout-cart .checkout-cart-info .final-price h2 {
-    font-size: 1.8rem !important; } }
+    font-size: 1.5rem !important; } }
 @media (min-width: 1200px) {
   .checkout .checkout-cart-item-detail {
-    padding-right: 150px; } }
+    padding-right: 130px; } }
 main {
   position: relative; }
 
@@ -1574,31 +1575,34 @@ main {
   position: relative;
   padding-bottom: 260px; }
 
-.rangeslider {
-  background: transparent; }
-
-.rangeslider__handle {
-  width: 18px;
-  height: 18px;
-  border: none;
-  top: -7px !important; }
-
-.rangeslider--horizontal {
+.nstSlider {
+  width: 100%;
+  background: #4F22BA;
   height: 3px;
-  position: relative; }
-  .rangeslider--horizontal:before {
-    content: '';
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    background: #875fee;
-    position: absolute;
+  margin-top: 15px; }
+  .nstSlider .bar {
+    height: 3px;
+    top: 0; }
+  .nstSlider .leftGrip, .nstSlider .rightGrip {
     top: -7px;
-    z-index: 1; }
+    width: 18px;
+    height: 18px; }
+  .nstSlider .leftGrip {
+    background: #8759F2;
+    border: 2px solid #fff; }
 
-.rangeslider__fill {
-  background: #fff; }
+.leftLabel {
+  display: inline-block;
+  color: #fff;
+  margin-top: 10px; }
+  .leftLabel:after {
+    content: ' -'; }
+
+.rightLabel {
+  display: inline-block;
+  color: #fff; }
+  .rightLabel:after {
+    content: ' RSD'; }
 
 .range-output {
   color: #fff;
