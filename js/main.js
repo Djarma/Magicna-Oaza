@@ -131,6 +131,7 @@ $(document).ready(function () {
         $('.small-cart').removeClass('active');
         $('.body-overlay').hide();
         $('.products').removeClass('active-filter');
+        $('.toggle-filter').toggleClass('fa-angle-left fa-angle-right');
     });
 
     // PRODUCT FILTER

@@ -494,9 +494,6 @@ header {
   left: 0;
   width: 100%;
   z-index: 10; }
-  header.nav-hover {
-    height: 400px;
-    border-bottom: 3px solid #FF151F; }
   header .container {
     max-width: 1620px;
     padding: 0 10px; }
@@ -705,6 +702,20 @@ header {
     header .container .header-action .user .fa {
       font-size: 28px; } }
 @media (min-width: 450px) and (min-width: 992px) {
+  header:before {
+    content: '';
+    height: 260px;
+    position: absolute;
+    top: -140px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s linear;
+    z-index: -1; }
+  header.nav-hover:before {
+    top: 116px;
+    border-bottom-color: #FF151F; }
   header .container .header-action .cart .small-cart .small-cart-item-detail {
     padding-right: 150px; }
   header .container .header-action .cart .small-cart .small-cart-info .price h4, header .container .header-action .cart .small-cart .small-cart-info .delivery h4 {
@@ -713,7 +724,8 @@ header {
     font-size: 1.8rem !important; }
   header .container .submenu {
     position: absolute;
-    top: 120px; }
+    top: 120px;
+    z-index: 10; }
     header .container .submenu .submenu-link {
       margin-bottom: 15px; }
     header .container .submenu .level-2 {
@@ -944,7 +956,7 @@ main {
 
 .ask-magzi {
   padding-top: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 10px;
   position: relative; }
   .ask-magzi .section-title {
     margin-bottom: 66px; }
@@ -1038,7 +1050,10 @@ main {
 
 @media (min-width: 450px) {
   main {
-    margin-top: 85px; } }
+    margin-top: 85px; }
+
+  .ask-magzi .form-group {
+    margin-right: 25px; } }
 @media (min-width: 576px) {
   main {
     margin-top: 105px; }
@@ -1047,8 +1062,7 @@ main {
     left: -5px; }
 
   .ask-magzi {
-    padding-top: 40px;
-    padding-bottom: 60px; }
+    padding-top: 40px; }
     .ask-magzi:after {
       content: '';
       background: url(../img/magzi.png) no-repeat;
@@ -1059,8 +1073,7 @@ main {
       left: 20px;
       z-index: -1; }
     .ask-magzi .form-group {
-      width: auto;
-      margin-right: 25px; }
+      width: auto; }
     .ask-magzi .magzi-price {
       width: 150px; }
 
@@ -1100,8 +1113,7 @@ main {
     right: -17px !important; }
 
   .ask-magzi {
-    padding-top: 61px;
-    padding-bottom: 99px; }
+    padding-top: 61px; }
     .ask-magzi:after {
       left: 140px; }
 
@@ -1120,7 +1132,12 @@ main {
     color: #9B9B9B;
     font-size: 1rem; }
   .product-item .price .new-price {
-    font-size: 1.5rem; } }
+    font-size: 1.5rem; }
+
+  .ask-magzi {
+    padding-bottom: 99px; }
+    .ask-magzi .form-group {
+      margin-right: 0; } }
 @media (min-width: 1400px) {
   .ask-magzi:after {
     left: 160px; }
